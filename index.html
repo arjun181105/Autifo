@@ -126,7 +126,15 @@
 </section>
 <!-- HOW IT WORKS -->
 <section class="py-20 bg-slate-900/30 border-y border-white/10" id="how">
-<div class="max-w-7xl mx-auto px-4">Discovery — consultation</div>
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="section-title">How it works</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+<div class="step reveal-up"><div class="step-num">1</div><h3 class="card-title">Discovery</h3><p>Kickoff call to map services, hours, policies, and booking rules.</p></div>
+<div class="step reveal-up"><div class="step-num">2</div><h3 class="card-title">Build &amp; Train</h3><p>We craft the agent’s voice, FAQs, and booking logic; run test calls until perfect.</p></div>
+<div class="step reveal-up"><div class="step-num">3</div><h3 class="card-title">Integrate &amp; Launch</h3><p>Connect calendars/CRMs and go live on your number or via call forwarding.</p></div>
+<div class="step reveal-up"><div class="step-num">4</div><h3 class="card-title">Optimise</h3><p>Weekly reviews of transcripts and results to improve conversion &amp; CX.</p></div>
+</div>
+</div>
 </section>
 <!-- USE CASES -->
 <section class="py-20" id="usecases">
@@ -134,7 +142,7 @@
 <h2 class="section-title">Use cases</h2>
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 <div class="card reveal-up"><h3 class="card-title">Roofing &amp; Fencing</h3><p>Emergency enquiries and site-visit scheduling—be first to respond and win the job. <b>Books into your system.</b></p></div>
-<div class="card reveal-up"><h3 class="card-title">Salons &amp; Med-spa</h3><p>Treatment enquiries, pre‑care/post‑care info, deposit handling.</p></div>
+<div class="card reveal-up"><h3 class="card-title">Salons &amp; Med spa</h3><p>Treatment enquiries, pre‑care/post‑care info, deposit handling.</p></div>
 <div class="card reveal-up"><h3 class="card-title">Home Services</h3><p>Quotes, on‑site scheduling, and emergency call routing.</p></div>
 <div class="card reveal-up"><h3 class="card-title">Automotive Dealers</h3><p>Capture leads, qualify test‑drive requests, and manage service bookings instantly.</p></div>
 </div>
@@ -159,7 +167,7 @@
 <section class="py-20" id="faq">
 <div class="max-w-4xl mx-auto px-4">
 <h2 class="section-title text-center">FAQ</h2>
-<div class="grid gap-4" id="faqBoxes"><div class="faq-box"><button class="faq-toggle" type="button">How long does setup take?<span class="faq-icon">+</span></button><div class="faq-body"><p>Most go live in <b>5–10 days</b> depending on integrations.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">Does it work after hours?<span class="faq-icon">+</span></button><div class="faq-body"><p>Yes — your AI receptionist runs <b>24/7</b> so you never miss a client.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">Will it integrate with our tools?<span class="faq-icon">+</span></button><div class="faq-body"><p>We support popular calendars, booking systems and <b>most major CRMs</b> like Google Calendar, Cliniko, Fresha, Timely, and Square. If you use something specific, we’ll confirm compatibility during onboarding.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">How much does it cost?<span class="faq-icon">+</span></button><div class="faq-body"><p>We tailor quotes by niche, call volume, and integrations. Click <b>Book Demo</b> and we’ll prepare a clear proposal.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">What about privacy &amp; security?<span class="faq-icon">+</span></button><div class="faq-body"><p>We use strict data minimisation and access controls. Transcripts and data are stored securely and shared only with you.</p></div></div></div>
+<div class="grid gap-4" id="faqBoxes"><div class="faq-box"><button class="faq-toggle" type="button">How long does setup take?<span class="faq-icon">+</span></button><div class="faq-body"><p>Most go live in <b>5–10 days</b> depending on integrations.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">Does it work after hours?<span class="faq-icon">+</span></button><div class="faq-body"><p>Yes — your AI receptionist runs <b>24/7</b> so you never miss a client.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">Will it integrate with our tools?<span class="faq-icon">+</span></button><div class="faq-body"><p>We support popular calendars, booking systems and <b>most major CRMs</b> like Google Calendar, Cliniko, Fresha, Timely, and Square. If you use something specific, we’ll confirm compatibility during onboarding.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">How much does it cost?<span class="faq-icon">+</span></button><div class="faq-body"><p>We tailor quotes by niche, call volume, and integrations. Click <b>Book a free consultation</b> and we’ll prepare a clear proposal.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">What about privacy &amp; security?<span class="faq-icon">+</span></button><div class="faq-body"><p>We use strict data minimisation and access controls. Transcripts and data are stored securely and shared only with you.</p></div></div></div>
 </div>
 </section>
 <!-- CONTACT STRIP -->
@@ -176,8 +184,7 @@
 <!-- GSAP -->
 <script referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> <script defer="" src="script.js"></script>
-<script>// ===== Demo video presence check (hide or show note) =====
-window.addEventListener('DOMContentLoaded', () => {
+<script>window.addEventListener('DOMContentLoaded', () => {
   const v = document.getElementById('liveDemoVideo');
   const note = document.getElementById('liveDemoNote');
   if (!v || !note) return;
