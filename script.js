@@ -100,16 +100,3 @@ document.addEventListener('click', (e)=>{
   const icon = t.querySelector('.faq-icon');
   if (icon) icon.textContent = box.classList.contains('open') ? '–' : '+';
 });
-
-// ===== Demo video presence check (hide note if file loads) =====
-window.addEventListener('DOMContentLoaded', () => {
-  const v = document.getElementById('liveDemoVideo');
-  const note = document.getElementById('liveDemoNote');
-  if (!v || !note) return;
-  const hideNote = () => { try { note.style.display = 'none'; } catch(e){} };
-  const showNote = () => { try { v.style.display = 'none'; note.style.display = ''; } catch(e){} };
-  // If metadata loads, we know the file exists
-  v.addEventListener('loadedmetadata', hideNote, { once: true });
-  // If an error fires (e.g., 404), show the note and hide the video
-  v.addEventListener('error', showNote, { once: true });
-});
