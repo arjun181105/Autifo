@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://autifo.com.au/</loc></url>
-  <url><loc>https://autifo.com.au/services</loc></url>
-  <url><loc>https://autifo.com.au/how-it-works</loc></url>
-  <url><loc>https://autifo.com.au/demo</loc></url>
-  <url><loc>https://autifo.com.au/use-cases</loc></url>
-  <url><loc>https://autifo.com.au/about</loc></url>
-  <url><loc>https://autifo.com.au/faq</loc></url>
+  <url>
+    <loc>https://autifo.com.au/</loc>
+    <priority>1.0</priority>
+  </url>
 </urlset>
