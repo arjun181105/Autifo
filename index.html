@@ -61,6 +61,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+
+  <!-- Cal.com embed (widget popup) -->
+  <script async src="https://cal.com/embed.js"></script>
+  <script>window.addEventListener('load',function(){ try{ Cal && Cal('init'); }catch(e){} });</script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-[Inter] selection:bg-brand-400 selection:text-slate-950">
 
@@ -86,9 +90,8 @@
         <a class="navlink" href="#faq">FAQ</a>
         <a
           class="hover:bg-brand-400 bg-brand-500 py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft transition"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
         >Book a free consultation</a>
       </nav>
       <button id="menuBtn" class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 focus:outline-none">
@@ -106,9 +109,8 @@
         <a class="navlink" href="#faq">FAQ</a>
         <a
           class="hover:bg-brand-400 bg-brand-500 text-center py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
         >Book a free consultation</a>
       </div>
     </div>
@@ -127,9 +129,8 @@
         <div class="mt-8 flex flex-wrap gap-3">
           <a
             class="cursor-pointer btn-primary"
-            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-            data-cal-namespace="ai-automation-demo-call"
-            data-cal-config='{"layout":"month_view","theme":"dark"}'
+            href="#book"
+            onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
           >Book a free consultation</a>
           <a class="btn-ghost" href="#services">See Services</a>
         </div>
@@ -196,76 +197,102 @@
         <div class="mt-6 text-center" id="book">
           <a
             class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-5 py-3 font-semibold text-slate-900 shadow-soft transition"
-            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-            data-cal-namespace="ai-automation-demo-call"
-            data-cal-config='{"layout":"month_view","theme":"dark"}'
+            href="#book"
+            onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
           >Book a demo — Stop losing money</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MEET OUR AGENTS (replaces old demo section entirely) -->
+  <!-- MEET OUR AGENTS -->
   <section id="agents" class="py-20 reveal-up">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="section-title">Meet our agents</h2>
       <p class="text-center text-slate-400 mt-2 mb-10">We can make custom voices — or even clone your own.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Noah -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-          <p class="font-semibold mb-3">Noah</p>
+
+        <!-- Noah (with phone) -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
+          <p class="font-semibold mb-3 text-lg">Noah</p>
           <audio id="audio-noah" preload="metadata" class="hidden">
             <source src="assets/agent-noah.wav" type="audio/wav"/>
           </audio>
-          <button data-audio="#audio-noah" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+          <button data-audio="#audio-noah" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2 mb-4">
             ▶ Play Voice
           </button>
+          <div class="mt-2">
+            <p class="text-sm text-slate-400 mb-1">Call Noah</p>
+            <a href="tel:+61480094137"
+               class="inline-block rounded-xl bg-gradient-to-r from-cyan-400 to-sky-500 px-4 py-2 font-semibold text-slate-900 hover:scale-105 transition">
+               +61 480 094 137
+            </a>
+          </div>
         </div>
 
-        <!-- Kylie -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-          <p class="font-semibold mb-3">Kylie</p>
-          <audio id="audio-kylie" preload="metadata" class="hidden">
-            <source src="assets/agent-kylie.wav" type="audio/wav"/>
-          </audio>
-          <button data-audio="#audio-kylie" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
-            ▶ Play Voice
-          </button>
-        </div>
-
-        <!-- Grace -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-          <p class="font-semibold mb-3">Grace</p>
+        <!-- Grace (with phone) -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
+          <p class="font-semibold mb-3 text-lg">Grace</p>
           <audio id="audio-grace" preload="metadata" class="hidden">
             <source src="assets/agent-grace.wav" type="audio/wav"/>
           </audio>
-          <button data-audio="#audio-grace" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+          <button data-audio="#audio-grace" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2 mb-4">
+            ▶ Play Voice
+          </button>
+          <div class="mt-2">
+            <p class="text-sm text-slate-400 mb-1">Call Grace</p>
+            <a href="tel:+61391096299"
+               class="inline-block rounded-xl bg-gradient-to-r from-fuchsia-400 to-pink-500 px-4 py-2 font-semibold text-slate-900 hover:scale-105 transition">
+               +61 3 9109 6299
+            </a>
+          </div>
+        </div>
+
+        <!-- Kylie (no number) -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
+          <p class="font-semibold mb-3 text-lg">Kylie</p>
+          <audio id="audio-kylie" preload="metadata" class="hidden">
+            <source src="assets/agent-kylie.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-kylie" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
             ▶ Play Voice
           </button>
         </div>
 
-        <!-- Max -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-          <p class="font-semibold mb-3">Max</p>
+        <!-- Max (no number) -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
+          <p class="font-semibold mb-3 text-lg">Max</p>
           <audio id="audio-max" preload="metadata" class="hidden">
             <source src="assets/agent-max.wav" type="audio/wav"/>
           </audio>
-          <button data-audio="#audio-max" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+          <button data-audio="#audio-max" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
             ▶ Play Voice
           </button>
         </div>
+
       </div>
 
+      <!-- Big CTA kept -->
       <div class="text-center mt-10">
-        <button id="openLiveModal" class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-5 py-3 font-semibold text-slate-900">
-          Try them in real time
+        <button
+          id="openLiveModal"
+          class="btn-glow group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-cyan-400 to-sky-500 px-7 py-4
+                 text-slate-900 font-extrabold text-lg md:text-xl shadow-soft ring-2 ring-cyan-300/40
+                 hover:from-cyan-300 hover:to-sky-400 hover:scale-[1.02] active:scale-[0.99] transition-all duration-200"
+          aria-label="Try our AI agents in real time — tap to call"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-slate-900/90">
+            <path d="M6.6 10.8a15.7 15.7 0 006.6 6.6l2.2-2.2a1.2 1.2 0 011.2-.3c1.3.4 2.7.6 4.1.6a1.2 1.2 0 011.2 1.2V20a1.2 1.2 0 01-1.2 1.2C10.9 21.2 2.8 13.1 2.8 3.2A1.2 1.2 0 014 2h2.4a1.2 1.2 0 011.2 1.2c0 1.4.2 2.8.6 4.1.1.4 0 .8-.3 1.2L6.6 10.8z"/>
+          </svg>
+          <span>Try them in real time</span>
+          <span class="hidden sm:inline text-slate-900/80 font-semibold">— Call now</span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Live modal -->
+  <!-- Live modal (kept) -->
   <div id="liveModal" class="fixed inset-0 z-50 hidden">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative mx-auto mt-24 w-[90%] max-w-md rounded-2xl bg-slate-900 p-6 ring-1 ring-white/10 shadow-xl">
@@ -277,7 +304,7 @@
           <a class="font-semibold hover:underline" href="tel:+61480094137">+61 480 094 137</a>
         </div>
         <div class="flex items-center justify-between">
-          <span>Kylie</span>
+          <span>Grace</span>
           <a class="font-semibold hover:underline" href="tel:+61391096299">+61 3 9109 6299</a>
         </div>
         <p class="mt-3 text-slate-400 text-sm">Both can help you <span class="font-semibold text-slate-200">book a demo</span> or answer questions.</p>
@@ -311,7 +338,7 @@
           <p>Reduce no-shows with automated SMS/email reminders and post-call follow-ups.</p>
         </div>
 
-        <!-- New: Personalised Dashboard -->
+        <!-- Personalised Dashboard -->
         <div class="card reveal-up">
           <h3 class="card-title">Personalised Dashboard</h3>
           <p>Live metrics, transcripts, intents and bookings — all in one place.</p>
@@ -321,9 +348,8 @@
       <div class="mt-10">
         <a
           class="cursor-pointer btn-primary"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
         >Book a free consultation</a>
       </div>
     </div>
@@ -367,18 +393,15 @@
         <div class="card reveal-up"><h3 class="card-title">Salons &amp; Med spa</h3></div>
         <div class="card reveal-up"><h3 class="card-title">Home Services</h3></div>
         <div class="card reveal-up"><h3 class="card-title">Automotive Dealers</h3></div>
-        <!-- new mini-cards -->
         <div class="card reveal-up"><h3 class="card-title">Dentists</h3></div>
         <div class="card reveal-up"><h3 class="card-title">Financial Firms</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Real Estate</h3></div>
       </div>
 
       <div class="mt-10">
         <a
           class="cursor-pointer btn-primary"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
         >Book a free consultation</a>
       </div>
     </div>
@@ -497,7 +520,6 @@
           const audio = document.querySelector(sel);
           if(!audio) return;
 
-          // If same button toggles pause
           if(currentAudio && currentAudio !== audio){
             currentAudio.pause();
             currentAudio.currentTime = 0;
@@ -543,21 +565,5 @@
     // Year
     (function(){ const y=document.getElementById('year'); if(y){ y.textContent = new Date().getFullYear(); }})();
   </script>
-
-  <!-- Cal element-click embed code (your exact embed) -->
-  <!-- Put this once; remove any other Cal.com scripts -->
-  <!-- Cal element-click embed code begins -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "ai-automation-demo-call", {origin:"https://app.cal.com"});
-
-    // Important: Please add the following attributes to clickable elements:
-    // data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-    // data-cal-namespace="ai-automation-demo-call"
-    // data-cal-config='{"layout":"month_view","theme":"dark"}'
-
-    Cal.ns["ai-automation-demo-call"]("ui", {"theme":"dark","cssVarsPerTheme":{"light":{"cal-brand":"#06b6d4"},"dark":{"cal-brand":"#06c0d4"}},"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-  <!-- Cal element-click embed code ends -->
 </body>
 </html>
