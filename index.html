@@ -61,10 +61,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
-
-  <!-- Cal.com embed (widget popup) -->
-  <script async src="https://cal.com/embed.js"></script>
-  <script>window.addEventListener('load',function(){ try{ Cal && Cal('init'); }catch(e){} });</script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-[Inter] selection:bg-brand-400 selection:text-slate-950">
 
@@ -90,8 +86,9 @@
         <a class="navlink" href="#faq">FAQ</a>
         <a
           class="hover:bg-brand-400 bg-brand-500 py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft transition"
-          href="#book"
-          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+          data-cal-namespace="ai-automation-demo-call"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
         >Book a free consultation</a>
       </nav>
       <button id="menuBtn" class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 focus:outline-none">
@@ -109,8 +106,9 @@
         <a class="navlink" href="#faq">FAQ</a>
         <a
           class="hover:bg-brand-400 bg-brand-500 text-center py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft"
-          href="#book"
-          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+          data-cal-namespace="ai-automation-demo-call"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
         >Book a free consultation</a>
       </div>
     </div>
@@ -129,8 +127,9 @@
         <div class="mt-8 flex flex-wrap gap-3">
           <a
             class="cursor-pointer btn-primary"
-            href="#book"
-            onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+            data-cal-namespace="ai-automation-demo-call"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
           >Book a free consultation</a>
           <a class="btn-ghost" href="#services">See Services</a>
         </div>
@@ -197,8 +196,9 @@
         <div class="mt-6 text-center" id="book">
           <a
             class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-5 py-3 font-semibold text-slate-900 shadow-soft transition"
-            href="#book"
-            onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+            data-cal-namespace="ai-automation-demo-call"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
           >Book a demo — Stop losing money</a>
         </div>
       </div>
@@ -321,8 +321,9 @@
       <div class="mt-10">
         <a
           class="cursor-pointer btn-primary"
-          href="#book"
-          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+          data-cal-namespace="ai-automation-demo-call"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
         >Book a free consultation</a>
       </div>
     </div>
@@ -369,13 +370,15 @@
         <!-- new mini-cards -->
         <div class="card reveal-up"><h3 class="card-title">Dentists</h3></div>
         <div class="card reveal-up"><h3 class="card-title">Financial Firms</h3></div>
+        <div class="card reveal-up"><h3 class="card-title">Real Estate</h3></div>
       </div>
 
       <div class="mt-10">
         <a
           class="cursor-pointer btn-primary"
-          href="#book"
-          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+          data-cal-namespace="ai-automation-demo-call"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
         >Book a free consultation</a>
       </div>
     </div>
@@ -540,5 +543,21 @@
     // Year
     (function(){ const y=document.getElementById('year'); if(y){ y.textContent = new Date().getFullYear(); }})();
   </script>
+
+  <!-- Cal element-click embed code (your exact embed) -->
+  <!-- Put this once; remove any other Cal.com scripts -->
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "ai-automation-demo-call", {origin:"https://app.cal.com"});
+
+    // Important: Please add the following attributes to clickable elements:
+    // data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
+    // data-cal-namespace="ai-automation-demo-call"
+    // data-cal-config='{"layout":"month_view","theme":"dark"}'
+
+    Cal.ns["ai-automation-demo-call"]("ui", {"theme":"dark","cssVarsPerTheme":{"light":{"cal-brand":"#06b6d4"},"dark":{"cal-brand":"#06c0d4"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal element-click embed code ends -->
 </body>
 </html>
