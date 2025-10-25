@@ -207,90 +207,85 @@
 
   <!-- MEET OUR AGENTS -->
   <section id="agents" class="py-20 reveal-up">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title">Meet our agents</h2>
-      <p class="text-center text-slate-400 mt-2 mb-10">We can make custom voices — or even clone your own.</p>
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="section-title">Meet our agents</h2>
+    <p class="text-center text-slate-100 mt-2 mb-10 font-semibold">
+      We can make custom voices — or even clone your own.
+    </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Noah (with phone) -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
-          <p class="font-semibold mb-3 text-lg">Noah</p>
-          <audio id="audio-noah" preload="metadata" class="hidden">
-            <source src="assets/agent-noah.wav" type="audio/wav"/>
-          </audio>
-          <button data-audio="#audio-noah" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2 mb-4">
-            ▶ Play Voice
-          </button>
-          <div class="mt-2">
-            <p class="text-sm text-slate-400 mb-1">Call Noah</p>
-            <a href="tel:+61480094137"
-               class="inline-block rounded-xl bg-gradient-to-r from-cyan-400 to-sky-500 px-4 py-2 font-semibold text-slate-900 hover:scale-105 transition">
-               +61 480 094 137
-            </a>
-          </div>
-        </div>
-
-        <!-- Grace (with phone) -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
-          <p class="font-semibold mb-3 text-lg">Grace</p>
-          <audio id="audio-grace" preload="metadata" class="hidden">
-            <source src="assets/agent-grace.wav" type="audio/wav"/>
-          </audio>
-          <button data-audio="#audio-grace" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2 mb-4">
-            ▶ Play Voice
-          </button>
-          <div class="mt-2">
-            <p class="text-sm text-slate-400 mb-1">Call Grace</p>
-            <a href="tel:+61391096299"
-               class="inline-block rounded-xl bg-gradient-to-r from-fuchsia-400 to-pink-500 px-4 py-2 font-semibold text-slate-900 hover:scale-105 transition">
-               +61 3 9109 6299
-            </a>
-          </div>
-        </div>
-
-        <!-- Kylie (no number) -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
-          <p class="font-semibold mb-3 text-lg">Kylie</p>
-          <audio id="audio-kylie" preload="metadata" class="hidden">
-            <source src="assets/agent-kylie.wav" type="audio/wav"/>
-          </audio>
-          <button data-audio="#audio-kylie" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
-            ▶ Play Voice
-          </button>
-        </div>
-
-        <!-- Max (no number) -->
-        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 text-center">
-          <p class="font-semibold mb-3 text-lg">Max</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Max -->
+      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 h-full">
+        <div class="flex flex-col items-center gap-4 h-full justify-between">
+          <p class="font-semibold">Max</p>
           <audio id="audio-max" preload="metadata" class="hidden">
             <source src="assets/agent-max.wav" type="audio/wav"/>
           </audio>
-          <button data-audio="#audio-max" class="play-btn inline-flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+          <button data-audio="#audio-max" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
             ▶ Play Voice
           </button>
+          <div class="w-full max-w-[190px] h-11 rounded-xl opacity-0 pointer-events-none">spacer</div>
         </div>
-
       </div>
 
-      <!-- Big CTA kept -->
-      <div class="text-center mt-10">
-        <button
-          id="openLiveModal"
-          class="btn-glow group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-cyan-400 to-sky-500 px-7 py-4
-                 text-slate-900 font-extrabold text-lg md:text-xl shadow-soft ring-2 ring-cyan-300/40
-                 hover:from-cyan-300 hover:to-sky-400 hover:scale-[1.02] active:scale-[0.99] transition-all duration-200"
-          aria-label="Try our AI agents in real time — tap to call"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-slate-900/90">
-            <path d="M6.6 10.8a15.7 15.7 0 006.6 6.6l2.2-2.2a1.2 1.2 0 011.2-.3c1.3.4 2.7.6 4.1.6a1.2 1.2 0 011.2 1.2V20a1.2 1.2 0 01-1.2 1.2C10.9 21.2 2.8 13.1 2.8 3.2A1.2 1.2 0 014 2h2.4a1.2 1.2 0 011.2 1.2c0 1.4.2 2.8.6 4.1.1.4 0 .8-.3 1.2L6.6 10.8z"/>
-          </svg>
-          <span>Try them in real time</span>
-          <span class="hidden sm:inline text-slate-900/80 font-semibold">— Call now</span>
-        </button>
+      <!-- Noah -->
+      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 h-full">
+        <div class="flex flex-col items-center gap-4 h-full justify-between">
+          <p class="font-semibold">Noah</p>
+          <audio id="audio-noah" preload="metadata" class="hidden">
+            <source src="assets/agent-noah.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-noah" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+          <a href="tel:+61480094137"
+             class="inline-flex items-center justify-center w-full max-w-[190px] h-11 rounded-xl bg-cyan-500/90 hover:bg-cyan-400 font-semibold text-slate-900 shadow-soft">
+            +61 480 094 137
+          </a>
+        </div>
+      </div>
+
+      <!-- Grace -->
+      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 h-full">
+        <div class="flex flex-col items-center gap-4 h-full justify-between">
+          <p class="font-semibold">Grace</p>
+          <audio id="audio-grace" preload="metadata" class="hidden">
+            <source src="assets/agent-grace.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-grace" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+          <a href="tel:+61391096299"
+             class="inline-flex items-center justify-center w-full max-w-[190px] h-11 rounded-xl bg-fuchsia-500/90 hover:bg-fuchsia-400 font-semibold text-slate-900 shadow-soft">
+            +61 3 9109 6299
+          </a>
+        </div>
+      </div>
+
+      <!-- Kylie -->
+      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10 h-full">
+        <div class="flex flex-col items-center gap-4 h-full justify-between">
+          <p class="font-semibold">Kylie</p>
+          <audio id="audio-kylie" preload="metadata" class="hidden">
+            <source src="assets/agent-kylie.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-kylie" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+          <div class="w-full max-w-[190px] h-11 rounded-xl opacity-0 pointer-events-none">spacer</div>
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- Big CTA button -->
+    <div class="text-center mt-10">
+      <button id="openLiveModal"
+              class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-6 py-3 font-bold text-slate-900 shadow-soft ring-2 ring-cyan-300 hover:scale-[1.02] transition btn-glow">
+        Try them in real time
+      </button>
+    </div>
+  </div>
+</section>
 
   <!-- Live modal (kept) -->
   <div id="liveModal" class="fixed inset-0 z-50 hidden">
