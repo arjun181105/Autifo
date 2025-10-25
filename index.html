@@ -1,196 +1,544 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Autifo — AI Receptionists</title>
-<meta content="AI receptionists that answer calls, book appointments, and convert enquiries — 24/7." name="description"/>
-<meta content="#0ea5e9" name="theme-color"/>
-<link href="assets/favicon.png" rel="icon"/>
-<link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="Autifo — AI Receptionists" property="og:title"/>
-<meta content="Never miss a client again. 24/7 voice agents that book straight into your calendar." property="og:description"/>
-<meta content="https://autifo.com.au/" property="og:url"/>
-<meta content="assets/og-image.jpg" property="og:image"/>
-<!-- Structured Data -->
-<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Organization", "name": "Autifo", "url": "https://arjun181105.github.io/automation-studios-website/", "logo": "assets/logo.png", "contactPoint": [{ "@type": "ContactPoint", "telephone": "+61 451 247 525", "contactType": "sales", "areaServed": "AU", "availableLanguage": ["English"] }] } </script>
-<!-- Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script> tailwind.config = { theme: { extend: { colors: { brand: { 500: '#06b6d4', 400: '#22d3ee' } }, boxShadow: { soft: '0 10px 30px rgba(0,0,0,.12)' } } } } </script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script>window.addEventListener('load',function(){ try{ Cal && Cal('init'); }catch(e){} });</script><script async="True" src="https://cal.com/embed.js"></script><script>window.addEventListener('load',function(){ try{ Cal && Cal('init'); }catch(e){} });</script><link href="https://autifo.com.au/" rel="canonical"/><meta content="summary_large_image" name="twitter:card"/><meta content="Autifo — AI Receptionists" name="twitter:title"/><meta content="AI receptionists that answer calls, book appointments, and convert enquiries — 24/7." name="twitter:description"/><meta content="https://autifo.com.au/assets/og-autifo.jpg" name="twitter:image"/></head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Autifo — AI Receptionists</title>
+  <meta name="description" content="AI receptionists that answer calls, book appointments, and convert enquiries — 24/7."/>
+  <meta name="theme-color" content="#0ea5e9"/>
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.png"/>
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Autifo — AI Receptionists"/>
+  <meta property="og:description" content="Never miss a client again. 24/7 voice agents that book straight into your calendar."/>
+  <meta property="og:url" content="https://autifo.com.au/"/>
+  <meta property="og:image" content="assets/og-image.jpg"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Autifo — AI Receptionists"/>
+  <meta name="twitter:description" content="AI receptionists that answer calls, book appointments, and convert enquiries — 24/7."/>
+  <meta name="twitter:image" content="https://autifo.com.au/assets/og-autifo.jpg"/>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://autifo.com.au/"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Autifo",
+    "url": "https://autifo.com.au/",
+    "logo": "https://autifo.com.au/assets/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+61 480 094 137",
+      "contactType": "sales",
+      "areaServed": "AU",
+      "availableLanguage": ["English"]
+    }]
+  }
+  </script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#06b6d4', 400: '#22d3ee' } },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.12)' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Cal.com embed (widget popup) -->
+  <script async src="https://cal.com/embed.js"></script>
+  <script>window.addEventListener('load',function(){ try{ Cal && Cal('init'); }catch(e){} });</script>
+</head>
 <body class="bg-slate-950 text-slate-100 font-[Inter] selection:bg-brand-400 selection:text-slate-950">
-<!-- Decorative glows -->
-<div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden">
-<div class="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl opacity-30 bg-cyan-500"></div>
-<div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl opacity-20 bg-fuchsia-500"></div>
-</div>
-<!-- NAV -->
-<header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60 border-b border-white/10">
-<div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-<a class="flex items-center gap-2" href="#home">
-<img alt="Autifo" class="h-8 w-8 rounded-lg" src="assets/logo.png"/>
-<span class="font-extrabold tracking-tight">Autifo</span>
-</a>
-<nav class="hidden md:flex items-center gap-6 text-sm">
-<a class="navlink" href="#services">Services</a>
-<a class="navlink" href="#how">How it works</a>
-<a class="navlink" href="#demo">Demo</a>
-<a class="navlink" href="#usecases">Use cases</a>
-<a class="navlink" href="#about">About</a>
-<a class="navlink" href="#faq">FAQ</a>
-<a class="hover:bg-brand-400 bg-brand-500 py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft transition" data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" rel="noopener" target="_blank">Book a free consultation</a>
-</nav>
-<button class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 focus:outline-none" id="menuBtn">
-<span class="sr-only">Open menu</span>
-<svg class="opacity-90" fill="none" height="24" stroke="currentColor" width="24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
-</button>
-</div>
-<div class="md:hidden hidden border-t border-white/10 bg-slate-950/80 backdrop-blur" id="mobileMenu">
-<div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
-<a class="navlink" href="#services">Services</a>
-<a class="navlink" href="#how">How it works</a>
-<a class="navlink" href="#demo">Demo</a>
-<a class="navlink" href="#usecases">Use cases</a>
-<a class="navlink" href="#about">About</a>
-<a class="navlink" href="#faq">FAQ</a>
-<a class="hover:bg-brand-400 bg-brand-500 text-center py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft" data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" rel="noopener" target="_blank">Book a free consultation</a>
-</div>
-</div>
-</header>
-<!-- HERO -->
-<section class="relative overflow-hidden" id="home">
-<div class="max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-<div class="reveal-left">
-<h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight"> Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">24/7 AI Receptionist</span> — Never Miss a Client Again. </h1>
-<p class="mt-5 text-slate-300/90 text-lg"> We build custom AI receptionists that answer calls, book appointments, and convert enquiries while you focus on running your business. </p>
-<div class="mt-8 flex flex-wrap gap-3">
-<a class="cursor-pointer btn-primary" data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" rel="noopener" target="_blank">Book a free consultation</a>
-<a class="btn-ghost" href="#services">See Services</a>
-</div>
-<div class="mt-6 text-sm text-slate-400">Melbourne-based • Fast setup • 24/7 coverage</div>
-</div>
-<div aria-hidden="true" class="reveal-right">
-<div class="relative rounded-2xl border border-white/10 p-1 bg-gradient-to-br from-white/10 to-white/5 shadow-soft">
-<div class="rounded-xl bg-slate-900/70 p-6">
-<div class="text-xs text-slate-400 mb-2">Live transcript (example)</div>
-<div aria-label="Animated transcript" class="terminal">
-<span class="t-line"><b>Caller:</b> Hi, I’d like to book a roofing site visit quote.</span>
-<span class="t-line"><b>AI:</b> Happy to help. May I have your full name?</span>
-<span class="t-line"><b>Caller:</b> Sarah Lee.</span>
-<span class="t-line"><b>AI:</b> Thanks Sarah. Friday afternoon is open — does 3:30pm suit?</span>
-<span class="t-line"><b>Caller:</b> Yes, perfect.</span>
-<span class="t-line"><b>AI:</b> Locked in for Friday at 3:30pm. I’ll email you the details and confirmation shortly.</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- TRUST -->
-<section class="py-10 border-y border-white/10 bg-slate-900/30">
-<div class="max-w-7xl mx-auto px-4 text-center">
-<p class="uppercase tracking-widest text-xs text-slate-400">Trusted by appointment‑based businesses across Melbourne — dental clinics, salons, med spas, home services, and automotive dealers.</p>
-</div>
-</section>
-<!-- DEMO -->
-<section class="py-20" id="demo">
-<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
-<div class="reveal-left">
-<h2 class="section-title">Live agent demo</h2>
-<div class="relative rounded-2xl border border-white/10 p-1 bg-gradient-to-br from-white/10 to-white/5 shadow-soft mt-4">
-<video class="rounded-xl w-full h-full" controls="" id="liveDemoVideo" poster="assets/demo-poster.jpg" preload="metadata"><source src="assets/live-demo.mp4" type="video/mp4"/>Your browser does not support the video tag.</video><p class="text-slate-400 text-sm mt-3" id="liveDemoNote">Demo video coming soon. When ready, just drop assets/live-demo.mp4.</p>
-</div> </div>
-</div>
-</section>
-<!-- SERVICES -->
-<section class="py-20" id="services">
-<div class="max-w-7xl mx-auto px-4">
-<h2 class="section-title">Services</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-<div class="card reveal-up"><h3 class="card-title">AI Receptionist (Voice)</h3><p>Answers calls in real time, handles FAQs, triages urgent issues, and books appointments directly.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Appointment &amp; CRM Integrations</h3><p>Connects with most calendars and CRMs—e.g., Google Calendar, Outlook, Cal.com, Calendly, Timely, Fresha; CRMs like HubSpot, Pipedrive, Zoho, ServiceM8/simPRO. If we can’t connect, we’ll email every call’s transcript.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Lead Capture &amp; Qualification</h3><p>Captures name, number, email, service intent, and urgency — flags high‑value leads instantly.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Follow‑Ups &amp; Reminders</h3><p>Reduce no‑shows with automated SMS/email reminders and post‑call follow‑ups.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Custom Voice &amp; Brand Personality</h3><p>Friendly, clinical, luxury, or energetic — we tune the voice to fit your brand.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Call Reviews &amp; Transcripts</h3><p>We send a transcript for every call to your inbox—so you can review and coach quickly.</p></div>
-</div>
-<div class="mt-10"><a class="cursor-pointer btn-primary" data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" rel="noopener" target="_blank">Book a free consultation</a></div>
-</div>
-</section>
-<!-- HOW IT WORKS -->
-<section class="py-20 bg-slate-900/30 border-y border-white/10" id="how">
-<div class="max-w-7xl mx-auto px-4">
-<h2 class="section-title">How it works</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-<div class="step reveal-up"><div class="step-num">1</div><h3 class="card-title">Discovery</h3><p>Kickoff call to map services, hours, policies, and booking rules.</p></div>
-<div class="step reveal-up"><div class="step-num">2</div><h3 class="card-title">Build &amp; Train</h3><p>We craft the agent’s voice, FAQs, and booking logic; run test calls until perfect.</p></div>
-<div class="step reveal-up"><div class="step-num">3</div><h3 class="card-title">Integrate &amp; Launch</h3><p>Connect calendars/CRMs and go live on your number or via call forwarding.</p></div>
-<div class="step reveal-up"><div class="step-num">4</div><h3 class="card-title">Optimise</h3><p>Weekly reviews of transcripts and results to improve conversion &amp; CX.</p></div>
-</div>
-</div>
-</section>
-<!-- USE CASES -->
-<section class="py-20" id="usecases">
-<div class="max-w-7xl mx-auto px-4">
-<h2 class="section-title">Use cases</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-<div class="card reveal-up"><h3 class="card-title">Roofing &amp; Fencing</h3><p>Emergency enquiries and site-visit scheduling—be first to respond and win the job. <b>Books into your system.</b></p></div>
-<div class="card reveal-up"><h3 class="card-title">Salons &amp; Med spa</h3><p>Treatment enquiries, pre‑care/post‑care info, deposit handling.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Home Services</h3><p>Quotes, on‑site scheduling, and emergency call routing.</p></div>
-<div class="card reveal-up"><h3 class="card-title">Automotive Dealers</h3><p>Capture leads, qualify test‑drive requests, and manage service bookings instantly.</p></div>
-</div>
-<div class="mt-10"><a class="cursor-pointer btn-primary" data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" rel="noopener" target="_blank">Book a free consultation</a></div>
-</div>
-</section>
-<!-- ABOUT -->
-<section class="py-20 bg-slate-900/30 border-y border-white/10" id="about">
-<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-<div class="reveal-left">
-<h2 class="section-title">About us</h2>
-<p class="mt-4 text-slate-300 leading-relaxed"> At <span class="font-semibold">Autifo</span>, we believe local businesses deserve automation without losing the human touch. Based in Melbourne, we combine cutting‑edge AI with thoughtful conversation design so every caller feels cared for while your calendar fills itself. </p>
-<ul class="mt-6 grid gap-2 text-slate-300">
-<li>• <b>Clarity</b> — Simple, transparent setup.</li>
-<li>• <b>Care</b> — Conversations that feel genuinely human.</li>
-<li>• <b>Results</b> — Measurable increases in bookings &amp; responsiveness.</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section class="py-20" id="faq">
-<div class="max-w-4xl mx-auto px-4">
-<h2 class="section-title text-center">FAQ</h2>
-<div class="grid gap-4" id="faqBoxes"><div class="faq-box"><button class="faq-toggle" type="button">How long does setup take?<span class="faq-icon">+</span></button><div class="faq-body"><p>Most go live in <b>5–10 days</b> depending on integrations.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">Does it work after hours?<span class="faq-icon">+</span></button><div class="faq-body"><p>Yes — your AI receptionist runs <b>24/7</b> so you never miss a client.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">Will it integrate with our tools?<span class="faq-icon">+</span></button><div class="faq-body"><p>We support popular calendars, booking systems and <b>most major CRMs</b> like Google Calendar, Cliniko, Fresha, Timely, and Square. If you use something specific, we’ll confirm compatibility during onboarding.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">How much does it cost?<span class="faq-icon">+</span></button><div class="faq-body"><p>We tailor quotes by niche, call volume, and integrations. Click <b>Book a free consultation</b> and we’ll prepare a clear proposal.</p></div></div><div class="faq-box"><button class="faq-toggle" type="button">What about privacy &amp; security?<span class="faq-icon">+</span></button><div class="faq-body"><p>We use strict data minimisation and access controls. Transcripts and data are stored securely and shared only with you.</p></div></div></div>
-</div>
-</section>
-<!-- CONTACT STRIP -->
-<section class="py-20" id="contact">
-<div class="max-w-4xl mx-auto px-4 text-center">
-<p class="text-slate-300">Email <a class="underline decoration-brand-400" href="mailto:demo@autifo.com">demo@autifo.com</a> or <a class="underline decoration-brand-400" href="mailto:arjun@autifo.com">arjun@autifo.com</a> — Phone: <a class="underline decoration-brand-400" href="tel:+61451247525">+61 451 247 525</a>
-</p>
-</div>
-</section>
-<footer class="py-10 text-center text-slate-400 text-sm">
-<div>© <span id="year"></span> Autifo — All rights reserved</div>
-</footer>
-<!-- Cal.com embed (modal) -->
-<!-- GSAP -->
-<script referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> <script defer="" src="script.js"></script>
-<script>window.addEventListener('DOMContentLoaded', () => {
-  const v = document.getElementById('liveDemoVideo');
-  const note = document.getElementById('liveDemoNote');
-  if (!v || !note) return;
-  const hideNote = () => { try { note.style.display = 'none'; } catch(e){} };
-  const showNote = () => { try { v.style.display = 'none'; note.style.display = ''; } catch(e){} };
-  v.addEventListener('loadedmetadata', hideNote, { once: true });
-  v.addEventListener('error', showNote, { once: true });
-});</script></body>
+
+  <!-- Decorative glows -->
+  <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl opacity-30 bg-cyan-500"></div>
+    <div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl opacity-20 bg-fuchsia-500"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2">
+        <img src="assets/logo.png" alt="Autifo" class="h-8 w-8 rounded-lg"/>
+        <span class="font-extrabold tracking-tight">Autifo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="navlink" href="#services">Services</a>
+        <a class="navlink" href="#how">How it works</a>
+        <a class="navlink" href="#agents">Agents</a>
+        <a class="navlink" href="#usecases">Use cases</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#faq">FAQ</a>
+        <a
+          class="hover:bg-brand-400 bg-brand-500 py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft transition"
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+        >Book a free consultation</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 focus:outline-none">
+        <span class="sr-only">Open menu</span>
+        <svg width="24" height="24" fill="none" stroke="currentColor" class="opacity-90"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-slate-950/80 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a class="navlink" href="#services">Services</a>
+        <a class="navlink" href="#how">How it works</a>
+        <a class="navlink" href="#agents">Agents</a>
+        <a class="navlink" href="#usecases">Use cases</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#faq">FAQ</a>
+        <a
+          class="hover:bg-brand-400 bg-brand-500 text-center py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft"
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+        >Book a free consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal-left">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">24/7 AI Receptionist</span> — Never Miss a Client Again.
+        </h1>
+        <p class="mt-5 text-slate-300/90 text-lg">
+          We build custom AI receptionists that answer calls, book appointments, and convert enquiries while you focus on running your business.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            class="cursor-pointer btn-primary"
+            href="#book"
+            onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+          >Book a free consultation</a>
+          <a class="btn-ghost" href="#services">See Services</a>
+        </div>
+        <div class="mt-6 text-sm text-slate-400">Melbourne-based • Fast setup • 24/7 coverage</div>
+      </div>
+
+      <div class="reveal-right" aria-hidden="true">
+        <div class="relative rounded-2xl border border-white/10 p-1 bg-gradient-to-br from-white/10 to-white/5 shadow-soft">
+          <div class="rounded-xl bg-slate-900/70 p-6">
+            <div class="text-xs text-slate-400 mb-2">Live transcript (example)</div>
+            <div class="terminal" aria-label="Animated transcript">
+              <span class="t-line"><b>Caller:</b> Hi, I’d like to book a roofing site visit quote.</span>
+              <span class="t-line"><b>AI:</b> Happy to help. May I have your full name?</span>
+              <span class="t-line"><b>Caller:</b> Sarah Lee.</span>
+              <span class="t-line"><b>AI:</b> Thanks Sarah. Friday afternoon is open — does 3:30pm suit?</span>
+              <span class="t-line"><b>Caller:</b> Yes, perfect.</span>
+              <span class="t-line"><b>AI:</b> Locked in for Friday at 3:30pm. I’ll email you the details and confirmation shortly.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR: How much money are you losing? -->
+  <section id="calculator" class="py-16 reveal-up relative">
+    <!-- subtle cyan orb -->
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute left-1/2 -translate-x-1/2 top-0 h-72 w-72 rounded-full blur-3xl opacity-20 bg-cyan-500"></div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">How much money are you losing?</h2>
+
+      <div class="rounded-2xl bg-slate-900/60 backdrop-blur p-6 shadow-lg ring-1 ring-white/10">
+        <label class="block text-slate-200 mb-2">
+          Missed calls per day: <span id="mcVal" class="font-semibold">5</span>
+        </label>
+        <input id="missedCalls" type="range" min="1" max="50" value="5" class="w-full accent-cyan-400"/>
+
+        <label class="block text-slate-200 mt-6 mb-2">Average client value ($)</label>
+        <input id="avgValue" type="number" value="500" min="1"
+               class="w-full rounded-lg bg-slate-800 border border-white/10 px-3 py-2 text-slate-100"/>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="rounded-xl bg-slate-800/60 p-4 text-center">
+            <p class="text-slate-300 text-sm">Lost revenue per day</p>
+            <p id="outDay" class="text-2xl font-bold" style="color:#ef4444">$625</p>
+          </div>
+          <div class="rounded-xl bg-slate-800/60 p-4 text-center">
+            <p class="text-slate-300 text-sm">Lost revenue per month</p>
+            <p id="outMonth" class="text-2xl font-bold" style="color:#ef4444">$18,750</p>
+          </div>
+          <div class="rounded-xl bg-slate-800/60 p-4 text-center">
+            <p class="text-slate-300 text-sm">Lost revenue per year</p>
+            <p id="outYear" class="text-2xl font-bold" style="color:#ef4444">$228,125</p>
+          </div>
+        </div>
+
+        <p class="mt-4 text-center text-xs text-slate-400">
+          *Assumes a 25% conversion rate on answered calls.
+        </p>
+
+        <div class="mt-6 text-center" id="book">
+          <a
+            class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-5 py-3 font-semibold text-slate-900 shadow-soft transition"
+            href="#book"
+            onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+          >Book a demo — Stop losing money</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET OUR AGENTS (replaces old demo section entirely) -->
+  <section id="agents" class="py-20 reveal-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title">Meet our agents</h2>
+      <p class="text-center text-slate-400 mt-2 mb-10">We can make custom voices — or even clone your own.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Noah -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
+          <p class="font-semibold mb-3">Noah</p>
+          <audio id="audio-noah" preload="metadata" class="hidden">
+            <source src="assets/agent-noah.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-noah" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+        </div>
+
+        <!-- Kylie -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
+          <p class="font-semibold mb-3">Kylie</p>
+          <audio id="audio-kylie" preload="metadata" class="hidden">
+            <source src="assets/agent-kylie.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-kylie" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+        </div>
+
+        <!-- Grace -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
+          <p class="font-semibold mb-3">Grace</p>
+          <audio id="audio-grace" preload="metadata" class="hidden">
+            <source src="assets/agent-grace.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-grace" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+        </div>
+
+        <!-- Max -->
+        <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
+          <p class="font-semibold mb-3">Max</p>
+          <audio id="audio-max" preload="metadata" class="hidden">
+            <source src="assets/agent-max.wav" type="audio/wav"/>
+          </audio>
+          <button data-audio="#audio-max" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
+            ▶ Play Voice
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <button id="openLiveModal" class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-5 py-3 font-semibold text-slate-900">
+          Try them in real time
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live modal -->
+  <div id="liveModal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative mx-auto mt-24 w-[90%] max-w-md rounded-2xl bg-slate-900 p-6 ring-1 ring-white/10 shadow-xl">
+      <button id="closeLiveModal" class="absolute right-3 top-3 text-slate-400 hover:text-slate-200" aria-label="Close">✕</button>
+      <h3 class="text-xl font-bold">Talk to our agents live</h3>
+      <div class="mt-4 space-y-3 text-slate-200">
+        <div class="flex items-center justify-between">
+          <span>Noah</span>
+          <a class="font-semibold hover:underline" href="tel:+61480094137">+61 480 094 137</a>
+        </div>
+        <div class="flex items-center justify-between">
+          <span>Kylie</span>
+          <a class="font-semibold hover:underline" href="tel:+61391096299">+61 3 9109 6299</a>
+        </div>
+        <p class="mt-3 text-slate-400 text-sm">Both can help you <span class="font-semibold text-slate-200">book a demo</span> or answer questions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title">Services</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div class="card reveal-up">
+          <h3 class="card-title">AI Receptionist (Voice)</h3>
+          <p>Answers calls in real time, handles FAQs, triages urgent issues, and books appointments directly.</p>
+        </div>
+
+        <div class="card reveal-up">
+          <h3 class="card-title">Appointment &amp; CRM Integrations</h3>
+          <p>Connects with most calendars and CRMs—e.g., Google Calendar, Outlook, Cal.com, Calendly, Timely, Fresha; CRMs like HubSpot, Pipedrive, Zoho, ServiceM8/simPRO. If we can’t connect, we’ll email every call’s transcript.</p>
+        </div>
+
+        <div class="card reveal-up">
+          <h3 class="card-title">Lead Capture &amp; Qualification</h3>
+          <p>Captures name, number, email, service intent, and urgency — flags high-value leads instantly.</p>
+        </div>
+
+        <div class="card reveal-up">
+          <h3 class="card-title">Follow-Ups &amp; Reminders</h3>
+          <p>Reduce no-shows with automated SMS/email reminders and post-call follow-ups.</p>
+        </div>
+
+        <!-- New: Personalised Dashboard -->
+        <div class="card reveal-up">
+          <h3 class="card-title">Personalised Dashboard</h3>
+          <p>Live metrics, transcripts, intents and bookings — all in one place.</p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <a
+          class="cursor-pointer btn-primary"
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+        >Book a free consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="py-20 bg-slate-900/30 border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title">How it works</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        <div class="step reveal-up"><div class="step-num">1</div><h3 class="card-title">Discovery</h3><p>Kickoff call to map services, hours, policies, and booking rules.</p></div>
+        <div class="step reveal-up"><div class="step-num">2</div><h3 class="card-title">Build &amp; Train</h3><p>We craft the agent’s voice, FAQs, and booking logic; run test calls until perfect.</p></div>
+        <div class="step reveal-up"><div class="step-num">3</div><h3 class="card-title">Integrate &amp; Launch</h3><p>Connect calendars/CRMs and go live on your number or via call forwarding.</p></div>
+        <div class="step reveal-up"><div class="step-num">4</div><h3 class="card-title">Optimise</h3><p>Weekly reviews of transcripts and results to improve conversion &amp; CX.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="usecases" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title">Use cases</h2>
+
+      <!-- persuasion band -->
+      <div class="mx-auto max-w-3xl mt-3 text-center text-slate-300">
+        <p class="font-semibold text-slate-100">
+          78% of people move on when a business doesn’t pick up — Autifo ensures you never lose them again.
+        </p>
+        <ul class="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
+          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Answered instantly — no hold time</li>
+          <li class="bg-slate-900/50 rounded-lg px-3 py-2">24/7 coverage (after-hours &amp; weekends)</li>
+          <li class="bg-slate-900/50 rounded-lg px-3 py-2">SMS confirmations cut no-shows</li>
+          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Books straight into your calendar/CRM</li>
+          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Every call logged &amp; searchable</li>
+          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Scale calls without extra staff</li>
+        </ul>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div class="card reveal-up"><h3 class="card-title">Roofing &amp; Fencing</h3></div>
+        <div class="card reveal-up"><h3 class="card-title">Salons &amp; Med spa</h3></div>
+        <div class="card reveal-up"><h3 class="card-title">Home Services</h3></div>
+        <div class="card reveal-up"><h3 class="card-title">Automotive Dealers</h3></div>
+        <!-- new mini-cards -->
+        <div class="card reveal-up"><h3 class="card-title">Dentists</h3></div>
+        <div class="card reveal-up"><h3 class="card-title">Financial Firms</h3></div>
+      </div>
+
+      <div class="mt-10">
+        <a
+          class="cursor-pointer btn-primary"
+          href="#book"
+          onclick="try{ Cal('open',{ link:'arjun-sharma-l5xsle/ai-automation-demo-call' }); }catch(e){}; return false;"
+        >Book a free consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-slate-900/30 border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal-left">
+        <h2 class="section-title">About us</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">
+          At <span class="font-semibold">Autifo</span>, we believe local businesses deserve automation without losing the human touch.
+          Based in Melbourne, we combine cutting-edge AI with thoughtful conversation design so every caller feels cared for while your calendar fills itself.
+        </p>
+        <ul class="mt-6 grid gap-2 text-slate-300">
+          <li>• <b>Clarity</b> — Simple, transparent setup.</li>
+          <li>• <b>Care</b> — Conversations that feel genuinely human.</li>
+          <li>• <b>Results</b> — Measurable increases in bookings &amp; responsiveness.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="section-title text-center">FAQ</h2>
+      <div id="faqBoxes" class="grid gap-4">
+        <div class="faq-box">
+          <button class="faq-toggle" type="button">How long does setup take?<span class="faq-icon">+</span></button>
+          <div class="faq-body"><p>Most go live in <b>5–10 days</b> depending on integrations.</p></div>
+        </div>
+        <div class="faq-box">
+          <button class="faq-toggle" type="button">Does it work after hours?<span class="faq-icon">+</span></button>
+          <div class="faq-body"><p>Yes — your AI receptionist runs <b>24/7</b> so you never miss a client.</p></div>
+        </div>
+        <div class="faq-box">
+          <button class="faq-toggle" type="button">Will it integrate with our tools?<span class="faq-icon">+</span></button>
+          <div class="faq-body"><p>We support popular calendars, booking systems and <b>most major CRMs</b> like Google Calendar, Cliniko, Fresha, Timely, and Square. If you use something specific, we’ll confirm compatibility during onboarding.</p></div>
+        </div>
+        <div class="faq-box">
+          <button class="faq-toggle" type="button">How much does it cost?<span class="faq-icon">+</span></button>
+          <div class="faq-body"><p>We tailor quotes by niche, call volume, and integrations. Click <b>Book a free consultation</b> and we’ll prepare a clear proposal.</p></div>
+        </div>
+        <div class="faq-box">
+          <button class="faq-toggle" type="button">What about privacy &amp; security?<span class="faq-icon">+</span></button>
+          <div class="faq-body"><p>We use strict data minimisation and access controls. Transcripts and data are stored securely and shared only with you.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-slate-300">
+        Email <a class="underline decoration-brand-400" href="mailto:info@autifo.com">info@autifo.com</a> — Phone:
+        <a class="underline decoration-brand-400" href="tel:+61480094137">+61 480 094 137</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-slate-400 text-sm">
+    <div>© <span id="year"></span> Autifo — All rights reserved</div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" referrerpolicy="no-referrer"></script>
+  <script defer src="script.js"></script>
+
+  <!-- Calculator JS -->
+  <script>
+    (function(){
+      const mc = document.getElementById('missedCalls');
+      const av = document.getElementById('avgValue');
+      const mcVal = document.getElementById('mcVal');
+      const outD = document.getElementById('outDay');
+      const outM = document.getElementById('outMonth');
+      const outY = document.getElementById('outYear');
+      if(!mc || !av) return;
+      const CLOSE_RATE = 0.25;
+      const fmt = n => n.toLocaleString('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0});
+      function calc(){
+        const calls = Math.max(1, parseInt(mc.value||'0',10));
+        const value = Math.max(1, parseFloat(av.value||'0'));
+        mcVal.textContent = calls;
+        const perDay = calls * CLOSE_RATE * value;
+        outD.textContent = fmt(perDay);
+        outM.textContent = fmt(perDay * 30);
+        outY.textContent = fmt(perDay * 365);
+      }
+      mc.addEventListener('input', calc);
+      av.addEventListener('input', calc);
+      calc();
+    })();
+  </script>
+
+  <!-- Agents: play buttons + modal -->
+  <script>
+    // Play buttons
+    (function(){
+      const buttons = document.querySelectorAll('.play-btn');
+      let currentAudio = null;
+      let currentBtn = null;
+
+      function resetBtn(btn){
+        if(!btn) return;
+        btn.textContent = '▶ Play Voice';
+      }
+
+      buttons.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const sel = btn.getAttribute('data-audio');
+          const audio = document.querySelector(sel);
+          if(!audio) return;
+
+          // If same button toggles pause
+          if(currentAudio && currentAudio !== audio){
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            resetBtn(currentBtn);
+          }
+
+          if(audio.paused){
+            audio.play().catch(()=>{});
+            btn.textContent = '⏸ Pause';
+            currentAudio = audio;
+            currentBtn = btn;
+          } else {
+            audio.pause();
+            btn.textContent = '▶ Play Voice';
+            currentAudio = null;
+            currentBtn = null;
+          }
+
+          audio.onended = ()=>{
+            resetBtn(btn);
+            if(currentAudio === audio){ currentAudio = null; currentBtn = null; }
+          };
+        });
+      });
+    })();
+
+    // Live Modal
+    (function(){
+      const open = document.getElementById('openLiveModal');
+      const close = document.getElementById('closeLiveModal');
+      const modal = document.getElementById('liveModal');
+      if(!open || !modal) return;
+      const overlay = modal.firstElementChild;
+
+      function show(){ modal.classList.remove('hidden'); }
+      function hide(){ modal.classList.add('hidden'); }
+
+      open.addEventListener('click', show);
+      close && close.addEventListener('click', hide);
+      overlay && overlay.addEventListener('click', hide);
+    })();
+
+    // Year
+    (function(){ const y=document.getElementById('year'); if(y){ y.textContent = new Date().getFullYear(); }})();
+  </script>
+</body>
 </html>
