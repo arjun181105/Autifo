@@ -80,9 +80,9 @@
         <span class="font-extrabold tracking-tight">Autifo</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="navlink" href="#problem">The Problem</a>
         <a class="navlink" href="#services">Services</a>
         <a class="navlink" href="#how">How it works</a>
-        <a class="navlink" href="#agents">Solutions</a>
         <a class="navlink" href="#usecases">Industries</a>
         <a class="navlink" href="#about">About</a>
         <a class="navlink" href="#faq">FAQ</a>
@@ -101,9 +101,9 @@
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-slate-950/80 backdrop-blur">
       <div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a class="navlink" href="#problem">The Problem</a>
         <a class="navlink" href="#services">Services</a>
         <a class="navlink" href="#how">How it works</a>
-        <a class="navlink" href="#agents">Solutions</a>
         <a class="navlink" href="#usecases">Industries</a>
         <a class="navlink" href="#about">About</a>
         <a class="navlink" href="#faq">FAQ</a>
@@ -162,160 +162,56 @@
     </div>
   </section>
 
-  <!-- CALCULATOR: How many leads are slipping through? -->
-  <section id="calculator" class="py-16 reveal-up relative">
-    <!-- subtle cyan orb -->
-    <div class="pointer-events-none absolute inset-0 -z-10">
-      <div class="absolute left-1/2 -translate-x-1/2 top-0 h-72 w-72 rounded-full blur-3xl opacity-20 bg-cyan-500"></div>
-    </div>
+  <!-- THE PROBLEM -->
+  <section id="problem" class="py-20 reveal-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <p class="text-center text-brand-400 font-semibold tracking-wide uppercase text-sm">The Problem</p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-center leading-tight">
+        Local businesses don’t lose leads because they’re bad.<br class="hidden sm:block"/> They lose them because they respond too late.
+      </h2>
+      <p class="mt-5 text-slate-300 text-center max-w-3xl mx-auto text-lg">
+        Someone fills out a form. Calls after hours. Asks for a quote. Sends a message. Then they wait. While your team is busy, that lead is already checking the next business.
+      </p>
+      <p class="mt-4 text-slate-300 text-center max-w-3xl mx-auto">
+        Autifo fixes the gaps where money leaks: slow response times, missed calls, weak follow-up, messy websites, manual admin, and disconnected systems.
+      </p>
 
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">How many leads are slipping through?</h2>
-
-      <div class="rounded-2xl bg-slate-900/60 backdrop-blur p-6 shadow-lg ring-1 ring-white/10">
-        <label class="block text-slate-200 mb-2">
-          Unanswered or slow-followed-up leads per day: <span id="mcVal" class="font-semibold">5</span>
-        </label>
-        <input id="missedCalls" type="range" min="1" max="50" value="5" class="w-full accent-cyan-400"/>
-
-        <label class="block text-slate-200 mt-6 mb-2">Average client value ($)</label>
-        <input id="avgValue" type="number" value="500" min="1"
-               class="w-full rounded-lg bg-slate-800 border border-white/10 px-3 py-2 text-slate-100"/>
-
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="rounded-xl bg-slate-800/60 p-4 text-center">
-            <p class="text-slate-300 text-sm">Lost revenue per day</p>
-            <p id="outDay" class="text-2xl font-bold" style="color:#ef4444">$625</p>
-          </div>
-          <div class="rounded-xl bg-slate-800/60 p-4 text-center">
-            <p class="text-slate-300 text-sm">Lost revenue per month</p>
-            <p id="outMonth" class="text-2xl font-bold" style="color:#ef4444">$18,750</p>
-          </div>
-          <div class="rounded-xl bg-slate-800/60 p-4 text-center">
-            <p class="text-slate-300 text-sm">Lost revenue per year</p>
-            <p id="outYear" class="text-2xl font-bold" style="color:#ef4444">$228,125</p>
-          </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <div class="card reveal-up">
+          <h3 class="card-title">Leads go cold fast</h3>
+          <p>If a new enquiry waits too long, intent drops and competitors get the next click, call, or booking.</p>
         </div>
-
-        <p class="mt-4 text-center text-xs text-slate-400">
-          *Estimate only. Actual results depend on lead quality, response time, and conversion rate.
-        </p>
-
-        <div class="mt-6 text-center" id="book">
-          <a
-            class="inline-flex items-center rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-5 py-3 font-semibold text-slate-900 shadow-soft transition"
-            href="#book"
-            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-            data-cal-namespace="ai-automation-demo-call"
-            data-cal-config='{"layout":"month_view","theme":"dark"}'
-          >Book a demo — stop leaking leads</a>
+        <div class="card reveal-up">
+          <h3 class="card-title">Follow-up gets forgotten</h3>
+          <p>Quotes, old leads, no-shows, and missed calls sit untouched because your team is already busy.</p>
         </div>
+        <div class="card reveal-up">
+          <h3 class="card-title">Your systems don’t talk</h3>
+          <p>Forms, calls, calendars, CRMs, ads, websites, and inboxes all work separately — so opportunities slip through.</p>
+        </div>
+        <div class="card reveal-up">
+          <h3 class="card-title">Staff waste time on repeat work</h3>
+          <p>The same questions, admin, reminders, updates, and qualification tasks get done manually every day.</p>
+        </div>
+      </div>
+
+      <p class="mt-10 text-center text-slate-200 font-semibold max-w-3xl mx-auto">
+        Autifo builds AI systems that plug these leaks before they cost you more leads, time, and revenue.
+      </p>
+
+      <div class="mt-8 text-center">
+        <a class="btn-primary" href="#services">See the solution</a>
       </div>
     </div>
   </section>
 
-  <!-- SOLUTIONS -->
- <section id="agents" class="py-20 reveal-up">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="section-title">AI virtual employees built around your business</h2>
-    <p class="text-center text-slate-400 mt-2 mb-10 font-semibold max-w-3xl mx-auto">
-      From lead qualification and inbound call intake to follow-ups, websites, marketing workflows, and custom automations — Autifo builds practical AI systems around how your business actually runs.
-    </p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Lead Qualifier (Noah) -->
-      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-        <p class="font-semibold mb-1">Lead Qualifier</p>
-        <p class="text-xs text-slate-400 mb-3">Voice demo · Noah</p>
-        <audio id="audio-noah" preload="metadata" class="hidden">
-          <source src="assets/agent-noah.wav" type="audio/wav"/>
-        </audio>
-        <button data-audio="#audio-noah" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
-          ▶ Play Voice
-        </button>
-        <div class="mt-4 text-center">
-          <a href="tel:+61480094137"
-             class="inline-flex items-center justify-center bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-4 py-2 rounded-lg shadow-soft transition">
-            Call the demo — +61 480 094 137
-          </a>
-        </div>
-      </div>
-
-      <!-- Inbound Call Intake (Kylie) -->
-      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-        <p class="font-semibold mb-1">Inbound Call Intake</p>
-        <p class="text-xs text-slate-400 mb-3">Voice demo · Kylie</p>
-        <audio id="audio-kylie" preload="metadata" class="hidden">
-          <source src="assets/agent-kylie.wav" type="audio/wav"/>
-        </audio>
-        <button data-audio="#audio-kylie" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
-          ▶ Play Voice
-        </button>
-      </div>
-
-      <!-- Follow-Up Assistant (Max) -->
-      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-        <p class="font-semibold mb-1">Follow-Up Assistant</p>
-        <p class="text-xs text-slate-400 mb-3">Voice demo · Max</p>
-        <audio id="audio-max" preload="metadata" class="hidden">
-          <source src="assets/agent-max.wav" type="audio/wav"/>
-        </audio>
-        <button data-audio="#audio-max" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
-          ▶ Play Voice
-        </button>
-      </div>
-
-      <!-- Appointment Booker (Grace) -->
-      <div class="rounded-2xl bg-slate-900/60 p-5 ring-1 ring-white/10">
-        <p class="font-semibold mb-1">Appointment Booker</p>
-        <p class="text-xs text-slate-400 mb-3">Voice demo · Grace</p>
-        <audio id="audio-grace" preload="metadata" class="hidden">
-          <source src="assets/agent-grace.wav" type="audio/wav"/>
-        </audio>
-        <button data-audio="#audio-grace" class="play-btn inline-flex items-center rounded-lg bg-white/10 hover:bg-white/15 px-4 py-2">
-          ▶ Play Voice
-        </button>
-      </div>
-    </div>
-
-    <p class="text-center text-slate-400 mt-8">
-      Choose from natural AI voices or build a custom workflow for your business.
-    </p>
-
-    <!-- Glowing CTA button -->
-    <div class="text-center mt-6">
-      <button id="openLiveModal"
-              class="inline-flex items-center gap-2 rounded-xl bg-cyan-500/90 hover:bg-cyan-400 px-6 py-3 font-bold text-slate-900 shadow-soft ring-2 ring-cyan-300 hover:scale-[1.02] transition btn-glow">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.743a1.125 1.125 0 00-.852-1.09l-4.635-1.157a1.125 1.125 0 00-1.173.37l-.97 1.184a1.125 1.125 0 01-1.55.162A12.034 12.034 0 017.5 9.75a1.125 1.125 0 01.162-1.55l1.184-.97a1.125 1.125 0 00.37-1.173L8.059 1.422A1.125 1.125 0 006.969.57H5.25A2.25 2.25 0 003 2.82v1.68z" />
-        </svg>
-        Test a live AI workflow
-      </button>
-    </div>
-  </div>
-</section>
-
-  <!-- Live modal (kept) -->
-  <div id="liveModal" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-black/60"></div>
-    <div class="relative mx-auto mt-24 w-[90%] max-w-md rounded-2xl bg-slate-900 p-6 ring-1 ring-white/10 shadow-xl">
-      <button id="closeLiveModal" class="absolute right-3 top-3 text-slate-400 hover:text-slate-200" aria-label="Close">✕</button>
-      <h3 class="text-xl font-bold">Test a live AI workflow</h3>
-      <div class="mt-4 space-y-3 text-slate-200">
-        <div class="flex items-center justify-between">
-          <span>Live AI demo</span>
-          <a class="font-semibold hover:underline" href="tel:+61480094137">+61 480 094 137</a>
-        </div>
-        <p class="mt-3 text-slate-400 text-sm">Give it a call to see how Autifo <span class="font-semibold text-slate-200">qualifies leads and books appointments</span> — or answers your questions.</p>
-      </div>
-    </div>
-  </div>
-
   <!-- SERVICES -->
   <section id="services" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title">Services</h2>
+      <h2 class="section-title">The Solution</h2>
+      <p class="text-center text-slate-400 mt-3 max-w-3xl mx-auto">
+        Custom AI systems built to respond faster, follow up better, capture more leads, and remove repetitive work from your business.
+      </p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         <div class="card reveal-up">
@@ -349,7 +245,7 @@
         </div>
       </div>
 
-      <div class="mt-14 text-center rounded-2xl bg-slate-900/40 ring-1 ring-white/10 px-6 py-10">
+      <div id="book" class="mt-14 text-center rounded-2xl bg-slate-900/40 ring-1 ring-white/10 px-6 py-10">
         <h3 class="text-2xl font-bold">Not sure what your business needs yet?</h3>
         <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
           Book a free consultation and we’ll map where leads, calls, follow-ups, your website, or admin are slowing your business down.
@@ -498,95 +394,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" referrerpolicy="no-referrer"></script>
   <script defer src="script.js"></script>
 
-  <!-- Calculator JS -->
+  <!-- Year -->
   <script>
-    (function(){
-      const mc = document.getElementById('missedCalls');
-      const av = document.getElementById('avgValue');
-      const mcVal = document.getElementById('mcVal');
-      const outD = document.getElementById('outDay');
-      const outM = document.getElementById('outMonth');
-      const outY = document.getElementById('outYear');
-      if(!mc || !av) return;
-      const CLOSE_RATE = 0.25;
-      const fmt = n => n.toLocaleString('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0});
-      function calc(){
-        const calls = Math.max(1, parseInt(mc.value||'0',10));
-        const value = Math.max(1, parseFloat(av.value||'0'));
-        mcVal.textContent = calls;
-        const perDay = calls * CLOSE_RATE * value;
-        outD.textContent = fmt(perDay);
-        outM.textContent = fmt(perDay * 30);
-        outY.textContent = fmt(perDay * 365);
-      }
-      mc.addEventListener('input', calc);
-      av.addEventListener('input', calc);
-      calc();
-    })();
-  </script>
-
-  <!-- Agents: play buttons + modal -->
-  <script>
-    // Play buttons
-    (function(){
-      const buttons = document.querySelectorAll('.play-btn');
-      let currentAudio = null;
-      let currentBtn = null;
-
-      function resetBtn(btn){
-        if(!btn) return;
-        btn.textContent = '▶ Play Voice';
-      }
-
-      buttons.forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const sel = btn.getAttribute('data-audio');
-          const audio = document.querySelector(sel);
-          if(!audio) return;
-
-          if(currentAudio && currentAudio !== audio){
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-            resetBtn(currentBtn);
-          }
-
-          if(audio.paused){
-            audio.play().catch(()=>{});
-            btn.textContent = '⏸ Pause';
-            currentAudio = audio;
-            currentBtn = btn;
-          } else {
-            audio.pause();
-            btn.textContent = '▶ Play Voice';
-            currentAudio = null;
-            currentBtn = null;
-          }
-
-          audio.onended = ()=>{
-            resetBtn(btn);
-            if(currentAudio === audio){ currentAudio = null; currentBtn = null; }
-          };
-        });
-      });
-    })();
-
-    // Live Modal
-    (function(){
-      const open = document.getElementById('openLiveModal');
-      const close = document.getElementById('closeLiveModal');
-      const modal = document.getElementById('liveModal');
-      if(!open || !modal) return;
-      const overlay = modal.firstElementChild;
-
-      function show(){ modal.classList.remove('hidden'); }
-      function hide(){ modal.classList.add('hidden'); }
-
-      open.addEventListener('click', show);
-      close && close.addEventListener('click', hide);
-      overlay && overlay.addEventListener('click', hide);
-    })();
-
-    // Year
     (function(){ const y=document.getElementById('year'); if(y){ y.textContent = new Date().getFullYear(); }})();
   </script>
 
