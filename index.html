@@ -1,416 +1,313 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Autifo — Custom AI Solutions for Local Aussie Businesses</title>
-  <meta name="description" content="Custom AI solutions for local Australian businesses. We implement AI virtual employees and automation systems to save time, respond faster, and book more qualified leads."/>
-  <meta name="theme-color" content="#0ea5e9"/>
-
-  <!-- Icons -->
-  <link rel="icon" href="assets/favicon.png"/>
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Autifo — Custom AI Solutions for Local Aussie Businesses"/>
-  <meta property="og:description" content="AI virtual employees and automation systems for local Australian businesses — save time, respond faster, and book more qualified leads."/>
-  <meta property="og:url" content="https://autifo.com.au/"/>
-  <meta property="og:image" content="assets/og-image.jpg"/>
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Autifo — Custom AI Solutions for Local Aussie Businesses"/>
-  <meta name="twitter:description" content="AI virtual employees and automation systems for local Australian businesses — save time, respond faster, and book more qualified leads."/>
-  <meta name="twitter:image" content="https://autifo.com.au/assets/og-autifo.jpg"/>
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://autifo.com.au/"/>
-
-  <!-- Structured Data -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autifo — Digital Systems for Property &amp; Mortgage Businesses</title>
+  <meta name="description" content="Autifo helps real estate agents, agencies and mortgage brokerages generate more opportunities, convert more leads and automate repetitive work.">
+  <meta name="theme-color" content="#05080c">
+  <link rel="canonical" href="https://autifo.com.au/">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Autifo — The digital partner for property + mortgage">
+  <meta property="og:description" content="Generate more opportunities. Convert more of them. Automate the repetitive work around them.">
+  <meta property="og:url" content="https://autifo.com.au/">
+  <meta property="og:image" content="https://autifo.com.au/assets/og-autifo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Autifo — The digital partner for property + mortgage">
+  <meta name="twitter:description" content="Generate more opportunities. Convert more of them. Automate the repetitive work around them.">
+  <meta name="twitter:image" content="https://autifo.com.au/assets/og-autifo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     "name": "Autifo",
     "url": "https://autifo.com.au/",
     "logo": "https://autifo.com.au/assets/logo.png",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+61451247525",
-      "contactType": "sales",
-      "areaServed": "AU",
-      "availableLanguage": ["English"]
-    }]
+    "description": "Digital systems for real estate agents, agencies and mortgage brokerages.",
+    "telephone": "+61451247525",
+    "email": "info@autifo.com",
+    "areaServed": "Australia",
+    "knowsAbout": ["Real estate lead generation", "Mortgage lead conversion", "Speed-to-lead systems", "Conversion-focused websites", "Custom AI agents"]
   }
   </script>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { brand: { 500: '#06b6d4', 400: '#22d3ee' } },
-          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.12)' }
-        }
-      }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-
-  <!-- (Removed old Cal.com async embed and init) -->
 </head>
-<body class="bg-slate-950 text-slate-100 font-[Inter] selection:bg-brand-400 selection:text-slate-950">
-
-  <!-- Decorative glows -->
-  <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
-    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl opacity-30 bg-cyan-500"></div>
-    <div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl opacity-20 bg-fuchsia-500"></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2">
-        <img src="assets/logo.png" alt="Autifo" class="h-8 w-8 rounded-lg"/>
-        <span class="font-extrabold tracking-tight">Autifo</span>
+<body>
+  <header class="site-nav" id="siteNav">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="Autifo home">
+        <span class="brand-mark"><img src="assets/logo.png" alt=""></span>
+        <span class="brand-copy"><strong>Autifo</strong><small>PROPERTY + MORTGAGE</small></span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="navlink" href="#problem">The Problem</a>
-        <a class="navlink" href="#services">Services</a>
-        <a class="navlink" href="#how">How it works</a>
-        <a class="navlink" href="#usecases">Industries</a>
-        <a class="navlink" href="#about">About</a>
-        <a class="navlink" href="#faq">FAQ</a>
-        <a
-          class="hover:bg-brand-400 bg-brand-500 py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft transition"
-          href="#book"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
-        >Book a free consultation</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#solutions">Solutions</a>
+        <a href="#system">The system</a>
+        <a href="#agents">AI agents</a>
+        <a href="#process">How we work</a>
       </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 focus:outline-none">
-        <span class="sr-only">Open menu</span>
-        <svg width="24" height="24" fill="none" stroke="currentColor" class="opacity-90"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-slate-950/80 backdrop-blur">
-      <div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
-        <a class="navlink" href="#problem">The Problem</a>
-        <a class="navlink" href="#services">Services</a>
-        <a class="navlink" href="#how">How it works</a>
-        <a class="navlink" href="#usecases">Industries</a>
-        <a class="navlink" href="#about">About</a>
-        <a class="navlink" href="#faq">FAQ</a>
-        <a
-          class="hover:bg-brand-400 bg-brand-500 text-center py-2 text-slate-950 font-semibold cursor-pointer px-4 rounded-xl shadow-soft"
-          href="#book"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
-        >Book a free consultation</a>
+      <div class="nav-end">
+        <span class="nav-note">Melbourne · Australia-wide</span>
+        <a class="button button-primary button-small" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" target="_blank" rel="noopener">Book a strategy call <span class="arrow">↗</span></a>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
       </div>
+      <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+        <a href="#solutions">Solutions</a><a href="#system">The system</a><a href="#agents">AI agents</a><a href="#process">How we work</a>
+        <a href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" target="_blank" rel="noopener">Book a strategy call ↗</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 py-12 md:py-28 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-      <div class="reveal-left">
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight">
-          Custom <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">AI Solutions</span> for Local Aussie Businesses.
-        </h1>
-        <p class="mt-5 text-base md:text-lg text-slate-300">
-          We help local businesses employ AI virtual employees that generate leads, contact them, answer their calls, and more…
-        </p>
-        <p class="mt-3 text-sm font-semibold tracking-wide text-brand-400">
-          Save time · Respond faster · Book more qualified leads
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a
-            class="cursor-pointer btn-primary"
-            href="#book"
-            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-            data-cal-namespace="ai-automation-demo-call"
-            data-cal-config='{"layout":"month_view","theme":"dark"}'
-          >Book a free consultation</a>
-          <a class="btn-ghost" href="#services">See services</a>
-        </div>
-        <div class="mt-6 text-sm text-slate-400">Melbourne-based · Built for Australian businesses · Fast setup</div>
-      </div>
-
-      <div class="reveal-right" aria-hidden="true">
-        <div class="relative rounded-2xl border border-white/10 p-1 bg-gradient-to-br from-white/10 to-white/5 shadow-soft">
-          <div class="rounded-xl bg-slate-900/70 p-6">
-            <div class="text-xs text-slate-400 mb-2">Speed-to-lead example</div>
-            <div class="terminal" aria-label="Animated transcript">
-              <span class="t-line"><b>New lead:</b> Hi, I’m interested in getting a quote.</span>
-              <span class="t-line"><b>AI:</b> Hey, is this Michael?</span>
-              <span class="t-line"><b>Lead:</b> Yes, it is.</span>
-              <span class="t-line"><b>AI:</b> Great. Just quickly, what service are you after and how soon do you need it?</span>
-              <span class="t-line"><b>Lead:</b> I need someone this week.</span>
-              <span class="t-line"><b>AI:</b> Perfect. I’ll grab a few details, qualify the job, and send everything to the team so they can follow up.</span>
-            </div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow one" aria-hidden="true"></div>
+      <div class="hero-glow two" aria-hidden="true"></div>
+      <div class="shell hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow reveal visible"><span class="eyebrow-dot"></span>Digital systems for property + mortgage</div>
+          <h1 class="reveal visible">More <span class="accent">opportunities.</span><br>More <em>conversions.</em></h1>
+          <p class="hero-lead reveal visible">Autifo is the digital partner for <strong>real estate agents, agencies and mortgage brokerages</strong>—building the websites, speed-to-lead systems and custom AI agents that turn demand into booked conversations.</p>
+          <div class="hero-actions reveal visible">
+            <a class="button button-primary" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" target="_blank" rel="noopener">Find your highest-ROI opportunity <span class="arrow">↗</span></a>
+            <a class="button button-secondary" href="#system">See the connected system <span class="arrow">↓</span></a>
+          </div>
+          <div class="hero-trust reveal visible">
+            <span><i></i>Built around your bottlenecks</span>
+            <span><i></i>Designed for measurable outcomes</span>
+            <span><i></i>No generic AI packages</span>
           </div>
         </div>
+
+        <div class="system-visual" aria-label="A connected lead conversion system">
+          <div class="orbit"></div><div class="orbit o2"></div>
+          <div class="flow-card reveal visible">
+            <div class="flow-top"><span>Opportunity flow · live</span><span class="live-pill">Connected</span></div>
+            <div class="flow-list">
+              <div class="flow-row"><span class="flow-icon">↗</span><span><strong>New property enquiry</strong><small>Website or Meta campaign</small></span><span class="flow-time">NOW</span></div>
+              <div class="flow-row"><span class="flow-icon">⚡</span><span><strong>Instant first response</strong><small>SMS, email or voice workflow</small></span><span class="flow-time">AUTO</span></div>
+              <div class="flow-row"><span class="flow-icon">✓</span><span><strong>Qualified and routed</strong><small>Context sent to the right person</small></span><span class="flow-time">READY</span></div>
+            </div>
+            <div class="flow-line" aria-hidden="true">
+              <svg viewBox="0 0 420 76" preserveAspectRatio="none"><defs><linearGradient id="flowGradient"><stop stop-color="#91f2d6"/><stop offset="1" stop-color="#2f9dff"/></linearGradient></defs><path d="M0 57 C70 56 82 18 145 26 S240 68 290 36 S365 11 420 19"/></svg>
+            </div>
+            <div class="flow-footer">
+              <div class="mini-metric"><b>01</b><span>Generate demand</span></div>
+              <div class="mini-metric"><b>02</b><span>Convert intent</span></div>
+              <div class="mini-metric"><b>03</b><span>Automate next</span></div>
+            </div>
+          </div>
+          <div class="float-chip c1">Lead contacted<span>while intent is high</span></div>
+          <div class="float-chip c2">Appointment booked<span>without manual chasing</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Autifo capabilities">
+      <div class="marquee-track">
+        <div class="marquee-set"><span>Speed-to-lead</span><span>Conversion websites</span><span>Custom AI agents</span><span>Meta Ads</span><span>CRM-connected workflows</span><span>Property + mortgage specialists</span></div>
+        <div class="marquee-set" aria-hidden="true"><span>Speed-to-lead</span><span>Conversion websites</span><span>Custom AI agents</span><span>Meta Ads</span><span>CRM-connected workflows</span><span>Property + mortgage specialists</span></div>
       </div>
     </div>
-  </section>
 
-  <!-- THE PROBLEM -->
-  <section id="problem" class="py-20 reveal-up">
-    <div class="max-w-5xl mx-auto px-4">
-      <p class="text-center text-brand-400 font-semibold tracking-wide uppercase text-sm">The Problem</p>
-      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-center leading-tight">
-        Local businesses don’t lose leads because they’re bad.<br class="hidden sm:block"/> They lose them because they respond too late.
-      </h2>
-      <p class="mt-5 text-slate-300 text-center max-w-3xl mx-auto text-lg">
-        Someone fills out a form. Calls after hours. Asks for a quote. Sends a message. Then they wait. While your team is busy, that lead is already checking the next business.
-      </p>
-      <p class="mt-4 text-slate-300 text-center max-w-3xl mx-auto">
-        Autifo fixes the gaps where money leaks: slow response times, missed calls, weak follow-up, messy websites, manual admin, and disconnected systems.
-      </p>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-        <div class="card reveal-up">
-          <h3 class="card-title">Leads go cold fast</h3>
-          <p>If a new enquiry waits too long, intent drops and competitors get the next click, call, or booking.</p>
+    <section class="section" id="problem">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-label reveal"><b>01</b>The opportunity</div>
+          <div><h2 class="section-title reveal">Growth is often hiding in the <em>gaps.</em></h2><p class="section-intro reveal delay-1">More leads will not fix a leaky process. Autifo finds the moments where opportunity slows down, gets missed or turns into manual work—then builds the system that closes the gap.</p></div>
         </div>
-        <div class="card reveal-up">
-          <h3 class="card-title">Follow-up gets forgotten</h3>
-          <p>Quotes, old leads, no-shows, and missed calls sit untouched because your team is already busy.</p>
+        <div class="gap-grid">
+          <article class="gap-card reveal"><span class="gap-num">01</span><h3>Enquiries wait too long.</h3><p>New vendor, buyer and borrower leads arrive while the team is busy. By the time someone responds, intent has faded.</p><span class="gap-outcome">Fix → immediate, relevant contact</span></article>
+          <article class="gap-card reveal delay-1"><span class="gap-num">02</span><h3>Traffic does not convert.</h3><p>A polished site can still leave valuable visitors unsure what to do next. Clear journeys turn attention into action.</p><span class="gap-outcome">Fix → conversion-led pages and offers</span></article>
+          <article class="gap-card reveal delay-2"><span class="gap-num">03</span><h3>Follow-up depends on memory.</h3><p>Database opportunities, no-replies and long-term prospects disappear into busy inboxes and inconsistent routines.</p><span class="gap-outcome">Fix → structured nurture and reactivation</span></article>
+          <article class="gap-card reveal delay-3"><span class="gap-num">04</span><h3>Admin absorbs good people.</h3><p>Repetitive qualification, routing, reminders and updates take time away from conversations that need a human.</p><span class="gap-outcome">Fix → tailored automation around the team</span></article>
         </div>
-        <div class="card reveal-up">
-          <h3 class="card-title">Your systems don’t talk</h3>
-          <p>Forms, calls, calendars, CRMs, ads, websites, and inboxes all work separately — so opportunities slip through.</p>
-        </div>
-        <div class="card reveal-up">
-          <h3 class="card-title">Staff waste time on repeat work</h3>
-          <p>The same questions, admin, reminders, updates, and qualification tasks get done manually every day.</p>
+        <div class="diagnostic-band reveal">
+          <span class="diagnostic-kicker">The Autifo approach</span>
+          <p>We do not start with a product. We start with <strong>how your business wins work</strong>—then prescribe the simplest, highest-ROI build.</p>
+          <a href="#process">See how we diagnose <span>↓</span></a>
         </div>
       </div>
+    </section>
 
-      <p class="mt-10 text-center text-slate-200 font-semibold max-w-3xl mx-auto">
-        Autifo builds AI systems that plug these leaks before they cost you more leads, time, and revenue.
-      </p>
+    <section class="section section-tint" id="solutions">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-label reveal"><b>02</b>Core solutions</div>
+          <div><h2 class="section-title reveal">Built to move an opportunity <em>forward.</em></h2><p class="section-intro reveal delay-1">Each solution works on its own. Connected together, they become a complete path from first click to qualified conversation.</p></div>
+        </div>
+        <div class="solutions-grid">
+          <article class="solution-card solution-feature reveal">
+            <div class="solution-copy">
+              <span class="solution-rank">Priority 01 · Speed-to-lead</span>
+              <h3>Respond while intent is still high.</h3>
+              <p>Contact new enquiries almost immediately, ask the right questions, route the lead, notify the team and book the next step—without waiting for someone to clear their inbox.</p>
+              <ul class="check-list"><li>Instant SMS, email or voice contact</li><li>Lead qualification and intelligent routing</li><li>Calendar booking and team notifications</li><li>CRM updates and structured follow-up</li></ul>
+            </div>
+            <div class="response-demo" aria-label="Speed-to-lead workflow example">
+              <div class="response-head"><span>Lead response sequence</span><b>Active</b></div>
+              <div class="response-event"><span class="event-time">00:00</span><div><b>Enquiry received</b><small>Seller appraisal · Brunswick</small></div><i>●</i></div>
+              <div class="response-event"><span class="event-time">00:12</span><div><b>Personalised contact sent</b><small>Source and intent recognised</small></div><i>●</i></div>
+              <div class="response-event"><span class="event-time">01:46</span><div><b>Lead qualified</b><small>Timeline, goal and location captured</small></div><i>●</i></div>
+              <div class="response-event"><span class="event-time">02:10</span><div><b>Agent notified</b><small>Context delivered before the call</small></div><i>●</i></div>
+            </div>
+          </article>
 
-      <div class="mt-8 text-center">
-        <a class="btn-primary" href="#services">See the solution</a>
+          <article class="solution-card reveal">
+            <span class="solution-rank">Priority 02 · Websites</span>
+            <h3>Turn more visits into enquiries.</h3>
+            <p>Conversion-focused websites for agents, agencies and brokers—built around the actions that create pipeline, not decoration for its own sake.</p>
+            <div class="browser-mini" aria-hidden="true">
+              <div class="browser-bar"><i></i><i></i><i></i><span>yourbusiness.com.au</span></div>
+              <div class="browser-body"><span class="browser-label">Local expertise. Clear next step.</span><b>Ready to make your next move?</b><em>Book a conversation ↗</em></div>
+            </div>
+            <span class="solution-foot">Appraisals · enquiries · applications · booked calls</span>
+          </article>
+
+          <article class="solution-card reveal delay-1">
+            <span class="solution-rank">Priority 03 · Custom AI agents</span>
+            <h3>Build around the workflow—not the hype.</h3>
+            <p>We map the job first, then build an agent around the exact follow-up, qualification, booking, admin or database task that needs to improve.</p>
+            <div class="agent-cloud"><span>Lead nurture</span><span>Enquiry handling</span><span>Database reactivation</span><span>Admin workflows</span><span>Appointment booking</span></div>
+            <span class="solution-foot">Purpose-built · CRM-connected · human handoff ready</span>
+          </article>
+
+          <article class="solution-card ads-card reveal delay-2">
+            <span class="solution-rank">Supporting solution · Meta Ads</span>
+            <h3>Generate demand your systems can convert.</h3>
+            <p>Campaigns designed as the front end of a wider conversion system. The lead does not stop at a form submission—it enters a fast, deliberate follow-up journey.</p>
+            <div class="ads-flow"><span>Campaign</span><b>→</b><span>Landing page</span><b>→</b><span>Lead workflow</span></div>
+            <span class="solution-foot">More than lead volume—better infrastructure behind it</span>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="section system-section" id="system">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-label reveal"><b>03</b>The connected system</div>
+          <div><h2 class="section-title reveal">Generate. Convert. Follow up. <em>Automate.</em></h2><p class="section-intro reveal delay-1">The strongest outcome comes when every stage hands cleanly into the next. No orphaned leads. No disconnected tools. No ambiguity about what happens now.</p></div>
+        </div>
+        <div class="pipeline reveal">
+          <article><span class="pipeline-num">01</span><div class="pipeline-icon">↗</div><h3>Generate</h3><p>Meta campaigns and focused offers create demand from the right market.</p><small>Demand creation</small></article>
+          <article><span class="pipeline-num">02</span><div class="pipeline-icon">◇</div><h3>Convert</h3><p>Conversion-led pages make the value clear and give intent somewhere to go.</p><small>Website + landing pages</small></article>
+          <article><span class="pipeline-num">03</span><div class="pipeline-icon">⚡</div><h3>Follow up</h3><p>New leads receive a fast, useful first response and a clear next step.</p><small>Speed-to-lead</small></article>
+          <article><span class="pipeline-num">04</span><div class="pipeline-icon">◎</div><h3>Automate</h3><p>AI agents nurture, qualify, route, book and handle repeatable work.</p><small>Custom workflows</small></article>
+        </div>
+        <div class="system-note reveal"><b>Use one piece—or connect the full loop.</b><span>Autifo recommends only what the business case supports.</span></div>
+      </div>
+    </section>
+
+    <section class="section agents-section" id="agents">
+      <div class="shell agents-layout">
+        <div class="agents-intro">
+          <div class="section-label reveal"><b>04</b>Custom AI agents</div>
+          <h2 class="section-title reveal">A specific agent for a <em>specific bottleneck.</em></h2>
+          <p class="section-intro reveal delay-1">No generic chatbot bolted onto the corner of a website. We understand the workflow, define the job, connect the right tools and design the human handoff.</p>
+          <a class="button button-secondary reveal delay-2" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" target="_blank" rel="noopener">Map an agent opportunity <span class="arrow">↗</span></a>
+        </div>
+        <div class="agent-use-grid">
+          <article class="agent-use reveal"><span>01</span><h3>Lead nurture</h3><p>Keep prospects moving with relevant, timed follow-up.</p></article>
+          <article class="agent-use reveal delay-1"><span>02</span><h3>Enquiry handling</h3><p>Answer common questions and capture the context the team needs.</p></article>
+          <article class="agent-use reveal"><span>03</span><h3>Qualification</h3><p>Ask consistent questions and route opportunities by fit and urgency.</p></article>
+          <article class="agent-use reveal delay-1"><span>04</span><h3>Appointment booking</h3><p>Move qualified conversations into the right calendar.</p></article>
+          <article class="agent-use reveal"><span>05</span><h3>Database reactivation</h3><p>Revisit dormant contacts with controlled, purposeful outreach.</p></article>
+          <article class="agent-use reveal delay-1"><span>06</span><h3>Internal admin</h3><p>Reduce repetitive updates, summaries, reminders and handoffs.</p></article>
+          <article class="agent-use reveal"><span>07</span><h3>Email + messaging</h3><p>Handle structured communication without losing the brand voice.</p></article>
+          <article class="agent-use reveal delay-1"><span>08</span><h3>CRM workflows</h3><p>Keep records, tasks and next steps connected to the conversation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="process">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-label reveal"><b>05</b>How Autifo works</div>
+          <div><h2 class="section-title reveal">Diagnose first. Build <em>second.</em></h2><p class="section-intro reveal delay-1">The product is not a menu of software. It is a custom digital solution, chosen and designed around the economics of your business.</p></div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal"><div class="process-top"><span>01</span><b>Consult</b></div><h3>Understand the business.</h3><p>We map how leads arrive, how the team responds, what tools are already in place and where opportunities are being lost.</p><ul><li>Lead sources</li><li>Response times</li><li>Follow-up</li><li>Admin load</li></ul></article>
+          <article class="process-card reveal delay-1"><div class="process-top"><span>02</span><b>Prescribe</b></div><h3>Find the highest-ROI move.</h3><p>We identify the bottleneck with the strongest business case and recommend the simplest solution that can materially improve it.</p><ul><li>Expected impact</li><li>Priority workflow</li><li>Integration path</li><li>Clear scope</li></ul></article>
+          <article class="process-card reveal delay-2"><div class="process-top"><span>03</span><b>Build</b></div><h3>Create the right system.</h3><p>Website, lead response, AI agent, campaign infrastructure—or a connected combination—built around the real process.</p><ul><li>Design</li><li>Implementation</li><li>Testing</li><li>Team handoff</li></ul></article>
+          <article class="process-card reveal delay-3"><div class="process-top"><span>04</span><b>Improve</b></div><h3>Refine with real signals.</h3><p>Once live, we use the actual workflow and outcomes to remove friction, tighten messaging and improve the next conversion step.</p><ul><li>Lead quality</li><li>Conversion flow</li><li>Response logic</li><li>Iteration</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section specialist-section" id="specialist">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-label reveal"><b>06</b>Industry focus</div>
+          <div><h2 class="section-title reveal">Built for the way property and mortgage businesses <em>actually operate.</em></h2></div>
+        </div>
+        <div class="specialist-grid">
+          <article class="specialist-card property reveal">
+            <span class="specialist-tag">Real estate</span><h3>Agents &amp; agencies</h3><p>Turn appraisal, buyer, landlord and recruitment interest into clearer journeys and faster conversations.</p>
+            <div class="specialist-list"><span>Appraisal lead response</span><span>Buyer and landlord enquiry routing</span><span>Agent profile conversion pages</span><span>Database nurture and reactivation</span></div>
+          </article>
+          <article class="specialist-card mortgage reveal delay-1">
+            <span class="specialist-tag">Mortgage</span><h3>Brokers &amp; brokerages</h3><p>Move borrowers from first enquiry to a properly prepared appointment with less chasing and repetitive administration.</p>
+            <div class="specialist-list"><span>Borrower enquiry qualification</span><span>Consultation booking journeys</span><span>Document and next-step reminders</span><span>Referral partner follow-up</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcomes-section">
+      <div class="shell">
+        <div class="outcomes-kicker reveal">What the right system is designed to change</div>
+        <div class="outcomes-grid">
+          <article class="reveal"><span>Faster</span><h3>Lead response</h3><p>Make first contact while the enquiry is fresh.</p></article>
+          <article class="reveal delay-1"><span>Higher</span><h3>Conversion quality</h3><p>Give the right visitor a clearer next step.</p></article>
+          <article class="reveal delay-2"><span>Better</span><h3>Follow-up</h3><p>Keep opportunities moving without relying on memory.</p></article>
+          <article class="reveal delay-3"><span>Less</span><h3>Manual work</h3><p>Return repetitive tasks to the system, not the team.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="shell faq-layout">
+        <div><div class="section-label reveal"><b>07</b>Questions</div><h2 class="section-title reveal">Clear answers before we <em>talk.</em></h2><p class="section-intro reveal delay-1">If the answer depends on your workflow, that is exactly what the strategy call is designed to uncover.</p></div>
+        <div class="faq-list">
+          <details class="faq reveal" open><summary>What does Autifo actually sell?<span>+</span></summary><p>A custom digital solution designed around the most valuable bottleneck in your property or mortgage business. That may be a conversion-focused website, a speed-to-lead system, a custom AI agent, Meta Ads infrastructure or a connected combination.</p></details>
+          <details class="faq reveal"><summary>Do we have to replace our current CRM or tools?<span>+</span></summary><p>Not necessarily. We first assess what already works. Where practical, the solution connects to your current website, forms, inbox, calendar, CRM and messaging tools rather than forcing a complete rebuild.</p></details>
+          <details class="faq reveal"><summary>Is this just an AI chatbot?<span>+</span></summary><p>No. Autifo is not positioned around generic chatbots. An AI agent is only useful when it has a clear job, the right workflow, appropriate guardrails and a defined handoff to the team.</p></details>
+          <details class="faq reveal"><summary>Can we start with one part of the system?<span>+</span></summary><p>Yes. Speed-to-lead, a website or a focused automation can work independently. We prioritise the highest-ROI starting point and design it so future stages can connect cleanly.</p></details>
+          <details class="faq reveal"><summary>How is pricing decided?<span>+</span></summary><p>Pricing depends on the scope, integrations and complexity of the solution. The strategy call identifies the business case first, then we provide a clear recommendation and scope before work begins.</p></details>
+          <details class="faq reveal"><summary>Who is Autifo best suited to?<span>+</span></summary><p>Real estate agents, agencies, mortgage brokers and brokerages with meaningful lead flow, follow-up friction or repetitive processes—and a clear reason to improve how those opportunities move through the business.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+      <div class="final-grid" aria-hidden="true"></div>
+      <div class="final-orbit o-a" aria-hidden="true"></div><div class="final-orbit o-b" aria-hidden="true"></div>
+      <div class="shell final-inner">
+        <div class="eyebrow reveal"><span class="eyebrow-dot"></span>Your highest-ROI opportunity is the starting point</div>
+        <h2 class="reveal delay-1">Find the gap worth <em>fixing first.</em></h2>
+        <p class="reveal delay-2">In one strategy call, we will map how opportunities move through your business, identify the strongest bottleneck and determine whether Autifo is the right partner to solve it.</p>
+        <a class="button button-primary reveal delay-3" href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" target="_blank" rel="noopener">Book your strategy call <span class="arrow">↗</span></a>
+        <div class="final-meta reveal delay-3"><span>Property + mortgage focused</span><span>Consultative, not product-led</span><span>Melbourne · Australia-wide</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><a class="brand" href="#top"><span class="brand-mark"><img src="assets/logo.png" alt=""></span><span class="brand-copy"><strong>Autifo</strong><small>PROPERTY + MORTGAGE</small></span></a><p>The digital partner for real estate agents, agencies and mortgage brokerages.</p></div>
+      <div><h3>Explore</h3><a href="#solutions">Solutions</a><a href="#system">The system</a><a href="#agents">AI agents</a><a href="#process">How we work</a></div>
+      <div><h3>Contact</h3><a href="https://cal.com/arjun-sharma-l5xsle/ai-automation-demo-call" target="_blank" rel="noopener">Book a strategy call ↗</a><a href="tel:+61451247525">+61 451 247 525</a><a href="mailto:info@autifo.com">info@autifo.com</a></div>
+      <div><h3>Focus</h3><span>Real estate agents</span><span>Real estate agencies</span><span>Mortgage brokers</span><span>Mortgage brokerages</span></div>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title">The Solution</h2>
-      <p class="text-center text-slate-400 mt-3 max-w-3xl mx-auto">
-        Custom AI systems built to respond faster, follow up better, capture more leads, and remove repetitive work from your business.
-      </p>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-        <div class="card reveal-up">
-          <h3 class="card-title">Speed-to-Lead Systems</h3>
-          <p>Contact new enquiries within minutes, qualify them, and send the right details to your team before the lead goes cold.</p>
-        </div>
-
-        <div class="card reveal-up">
-          <h3 class="card-title">Inbound Call Intake</h3>
-          <p>Answer calls, collect details, handle FAQs, qualify customers, and route urgent enquiries without hiring extra staff.</p>
-        </div>
-
-        <div class="card reveal-up">
-          <h3 class="card-title">Follow-Ups &amp; Reminders</h3>
-          <p>Automatically follow up quotes, old leads, missed calls, no-shows, and customers who have not replied.</p>
-        </div>
-
-        <div class="card reveal-up">
-          <h3 class="card-title">Web Design &amp; Landing Pages</h3>
-          <p>Fast, clean websites and landing pages built to capture leads and turn visitors into calls, forms, and bookings.</p>
-        </div>
-
-        <div class="card reveal-up">
-          <h3 class="card-title">Marketing Workflows</h3>
-          <p>Connect ads, forms, landing pages, CRMs, calendars, and follow-up systems so your marketing does not leak opportunities.</p>
-        </div>
-
-        <div class="card reveal-up">
-          <h3 class="card-title">Custom AI Solutions</h3>
-          <p>Tailored automations for admin, customer intake, CRM updates, reporting, reminders, and business-specific workflows.</p>
-        </div>
-      </div>
-
-      <div id="book" class="mt-14 text-center rounded-2xl bg-slate-900/40 ring-1 ring-white/10 px-6 py-10">
-        <h3 class="text-2xl font-bold">Not sure what your business needs yet?</h3>
-        <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
-          Book a free consultation and we’ll map where leads, calls, follow-ups, your website, or admin are slowing your business down.
-        </p>
-        <div class="mt-6">
-          <a
-            class="cursor-pointer btn-primary"
-            href="#book"
-            data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-            data-cal-namespace="ai-automation-demo-call"
-            data-cal-config='{"layout":"month_view","theme":"dark"}'
-          >Book a free consultation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how" class="py-20 bg-slate-900/30 border-y border-white/10">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title">How it works</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-        <div class="step reveal-up"><div class="step-num">1</div><h3 class="card-title">Discovery</h3><p>We map how your business gets leads, handles calls, books jobs, follows up, and manages admin.</p></div>
-        <div class="step reveal-up"><div class="step-num">2</div><h3 class="card-title">Build</h3><p>We design the AI workflow, website, call flow, follow-up system, or automation around your exact process.</p></div>
-        <div class="step reveal-up"><div class="step-num">3</div><h3 class="card-title">Integrate &amp; Launch</h3><p>We connect your tools, calendars, forms, CRM, phone system, or inbox — then test everything before going live.</p></div>
-        <div class="step reveal-up"><div class="step-num">4</div><h3 class="card-title">Optimise</h3><p>We review performance, improve the workflow, and keep refining based on real conversations and results.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES -->
-  <section id="usecases" class="py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title">Industries</h2>
-      <p class="text-center text-slate-300 mt-3 max-w-3xl mx-auto font-semibold text-slate-100">
-        Built for local businesses that rely on speed, follow-up, and trust
-      </p>
-
-      <!-- persuasion band -->
-      <div class="mx-auto max-w-3xl mt-4 text-center text-slate-300">
-        <p class="text-slate-300">
-          When leads wait too long, they often go elsewhere. Autifo helps your business respond faster, follow up properly, and stay organised.
-        </p>
-        <ul class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
-          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Faster lead response</li>
-          <li class="bg-slate-900/50 rounded-lg px-3 py-2">24/7 call intake</li>
-          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Follow-up automation</li>
-          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Website &amp; landing page support</li>
-          <li class="bg-slate-900/50 rounded-lg px-3 py-2">CRM and calendar workflows</li>
-          <li class="bg-slate-900/50 rounded-lg px-3 py-2">Custom systems for your business</li>
-        </ul>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-        <div class="card reveal-up"><h3 class="card-title">Real Estate Agencies</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Mortgage Brokers &amp; Finance</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Trades &amp; Construction</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Automotive Dealers</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Clinics, Salons &amp; Med Spas</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Accountants &amp; Professional Services</h3></div>
-        <div class="card reveal-up"><h3 class="card-title">Local Service Businesses</h3></div>
-      </div>
-
-      <div class="mt-10">
-        <a
-          class="cursor-pointer btn-primary"
-          href="#book"
-          data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"
-          data-cal-namespace="ai-automation-demo-call"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
-        >Book a free consultation</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-20 bg-slate-900/30 border-y border-white/10">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-      <div class="reveal-left">
-        <h2 class="section-title">About us</h2>
-        <p class="mt-4 text-slate-300 leading-relaxed">
-          <span class="font-semibold">Autifo</span> helps Australian local businesses use AI in a practical way — not as a gimmick, but as systems that save time, respond to leads faster, reduce admin, and create more qualified opportunities.
-        </p>
-        <p class="mt-4 text-slate-300 leading-relaxed">
-          Based in Melbourne, we build custom AI solutions across speed-to-lead, inbound call intake, follow-ups, websites, marketing workflows, and business automation.
-        </p>
-        <ul class="mt-6 grid gap-2 text-slate-300">
-          <li>• <b>Practical</b> — Built around real business problems, not random AI hype.</li>
-          <li>• <b>Custom</b> — Every system is shaped around how your business actually operates.</li>
-          <li>• <b>Results-focused</b> — The goal is simple: faster response, fewer missed leads, more booked appointments, and less admin.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-20">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="section-title text-center">FAQ</h2>
-      <div id="faqBoxes" class="grid gap-4">
-        <div class="faq-box">
-          <button class="faq-toggle" type="button">How long does setup take?<span class="faq-icon">+</span></button>
-          <div class="faq-body"><p>Simple systems can be set up quickly, depending on the workflow, integrations, and level of customisation needed. More advanced builds take longer, but we keep the process clear from the start.</p></div>
-        </div>
-        <div class="faq-box">
-          <button class="faq-toggle" type="button">Is Autifo only an AI receptionist?<span class="faq-icon">+</span></button>
-          <div class="faq-body"><p>No. AI call intake is one service, but Autifo also builds speed-to-lead systems, follow-up automations, websites, landing pages, marketing workflows, CRM/calendar integrations, and custom AI solutions.</p></div>
-        </div>
-        <div class="faq-box">
-          <button class="faq-toggle" type="button">Will it work with our current tools?<span class="faq-icon">+</span></button>
-          <div class="faq-body"><p>In most cases, yes. We can work with calendars, CRMs, forms, websites, inboxes, phone systems, and other business tools. If a direct integration is not possible, we find a practical workaround.</p></div>
-        </div>
-        <div class="faq-box">
-          <button class="faq-toggle" type="button">How much does it cost?<span class="faq-icon">+</span></button>
-          <div class="faq-body"><p>Pricing depends on what you need built. Simple systems are cheaper, while custom workflows with multiple integrations cost more. Book a free consultation and we’ll recommend the simplest setup that makes sense.</p></div>
-        </div>
-        <div class="faq-box">
-          <button class="faq-toggle" type="button">What about privacy &amp; security?<span class="faq-icon">+</span></button>
-          <div class="faq-body"><p>We only collect the information needed for the system to work. For sensitive industries, we can design workflows around consent, limited data collection, and secure handling of customer information.</p></div>
-        </div>
-        <div class="faq-box">
-          <button class="faq-toggle" type="button">Do you offer a free trial or pilot?<span class="faq-icon">+</span></button>
-          <div class="faq-body"><p>For selected local businesses, we may offer a short pilot so you can see whether the system is genuinely useful before committing long-term.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-slate-300">
-        Email <a class="underline decoration-brand-400" href="mailto:info@autifo.com">info@autifo.com</a> — Phone:
-        <a class="underline decoration-brand-400" href="tel:+61451247525">+61 451 247 525</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-10 text-center text-slate-400 text-sm">
-    <div>© <span id="year"></span> Autifo — All rights reserved</div>
+    <div class="shell footer-bottom"><span>© 2026 Autifo. All rights reserved.</span><span>Melbourne, Australia</span></div>
   </footer>
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" referrerpolicy="no-referrer"></script>
-  <script defer src="script.js"></script>
-
-  <!-- Year -->
-  <script>
-    (function(){ const y=document.getElementById('year'); if(y){ y.textContent = new Date().getFullYear(); }})();
-  </script>
-
-  <!-- Cal element-click embed code begins -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "ai-automation-demo-call", {origin:"https://app.cal.com"});
-
-    // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-    // `data-cal-link="arjun-sharma-l5xsle/ai-automation-demo-call"`
-    // data-cal-namespace="ai-automation-demo-call"
-    // `data-cal-config='{"layout":"month_view"}'`
-
-    Cal.ns["ai-automation-demo-call"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-  <!-- Cal element-click embed code ends -->
+  <script src="script.js"></script>
 </body>
 </html>
